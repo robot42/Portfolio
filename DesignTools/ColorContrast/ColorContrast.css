@@ -1,0 +1,150 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+@import 'https://fonts.googleapis.com/css?family=Kite+One';
+
+/* basic elements */
+html {
+    margin: 0;
+	padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+	font-family: Arial;
+	line-height: 1.4;
+	margin: 20px;
+	padding: 0;
+	font-size: 20pt;
+	}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24pt;
+    font-weight: 400;
+	white-space: nowrap;
+    display: inline;
+	}
+
+header img {
+    float: right;
+    display: inline;
+}
+
+header {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* everythig for the color input card */
+.colors-card {
+    border-color: gainsboro;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.color-list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    min-height: 120px;
+}
+
+.color-entry {
+    color: gainsboro;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.function-area {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.function-area-overlay {
+    margin-top: -90px;
+}
+
+.function-area-invisible {
+    visibility: hidden;
+}
+
+.colors-circle-1 {
+    display: block;
+    margin: auto;
+    background-color: skyblue;
+    height: 80px;
+    -moz-border-radius:40px;
+    -webkit-border-radius: 40px;
+    width: 80px;
+}
+
+.colors-circle-2 {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    height: 70px;
+    -moz-border-radius:35px;
+    -webkit-border-radius: 35px;
+    width: 70px;
+}
+
+.colors-circle-3 {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: deepskyblue;
+    height: 40px;
+    -moz-border-radius:20px;
+    -webkit-border-radius: 20px;
+    width: 40px;
+}
+
+.button-bar {
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+}
+
+.button {
+    cursor: default;
+    margin-left: 20px;
+    display: inline-block;
+    padding: 5px 15px;
+    border: solid 1px black;
+}
+
+.default-button {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px 35px;
+}
+
+input {
+    margin-left: 20px;
+    font-size: 24px;
+    text-align: right;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Color Contrast</title>
+
+	<link rel="stylesheet" media="screen" href="ColorContrast.css">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="ColorContrast.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Color Contrast</h1>
+		<img src="logo.png"/>
+    </header>
+
+    <div class="colors-card">
+        <!-- the list of colors -->
+        <ul class="color-list" contenteditable="true">
+            <li class="color-entry">RGB(255,100,23)</li>
+            <li class="color-entry">HSL(34,200,19)</li>
+            <li class="color-entry">#FF05A3</li>
+        </ul>
+
+        <!-- the function areas -->
+
+        <!-- tap circles for initial state -->
+        <section id="tap-function" class="function-area">
+            <div class="colors-circle-1">
+                <div class="colors-circle-2">
+                    <div class="colors-circle-3"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ok and cancel for edit mode -->
+        <section id="edit-function" class="function-area function-area-overlay function-area-invisible">
+            <ul class="button-bar">
+                <li id="cancel-button" class="button">Cancel</li>
+                <li id="save-button" class="button default-button">Save</li>
+            </ul>
+        </section>
+
+        <!-- contrast limit for display mode -->
+        <section id="limit-function" class="function-area function-area-overlay function-area-invisible">
+            <label>Minimum Contrast</label>
+            <input type="number" max="21" min="1" value="7">
+        </section>
+    </div>
+    <input type="color">
+</body>
+</html>
