@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void test_threading();
+
 #endif /* threading_hpp */
