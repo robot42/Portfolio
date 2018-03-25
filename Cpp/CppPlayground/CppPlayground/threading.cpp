@@ -13,8 +13,38 @@
 #include <iostream>
 #include <algorithm>
 #include <thread>
+#include "fakeit.hpp"
 
 using namespace std;
+using namespace fakeit;
+
+struct SomeInterface
+{
+    virtual int foo(int) = 0;
+    virtual int bar(string) = 0;
+};
+
+void test_test()
+{
+    Mock<SomeInterface> mock;
+    
+    // Setup mock behavior
+    When(Method(mock, foo)).AlwaysDo([](int x) { return 2 * x; });
+    When(Method(mock, bar)).Return(1, 2, 3, 4);
+    
+    // Fetch the mock instance.
+    SomeInterface &i = mock.get();
+    
+    i.foo(1);
+    
+    // Verify method mock.foo was invoked.
+    Verify(Method(mock,foo));
+    
+    // Verify method mock.foo was invoked with specific arguments.
+    Verify(Method(mock,foo).Using(1));
+}
+
+
 
 string reverse_string(const string& s)
 {
@@ -36,4 +66,6 @@ void test_threading()
     cout << "R1: " << f.get() << endl << endl;
     cout << "R2: " << g.get() << endl << endl;
     cout << "R3: " << h.get() << endl << endl;
+    
+    test_test();
 }

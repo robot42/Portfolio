@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		1F558B22205E7DB50049DD5F /* threading.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = threading.cpp; sourceTree = "<group>"; };
 		1F558B23205E7DB50049DD5F /* threading.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = threading.hpp; sourceTree = "<group>"; };
+		1F5923432066FEA900F645DB /* fakeit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fakeit.hpp; sourceTree = "<group>"; };
 		1FF1FF5D204212E0003C700C /* CppPlayground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppPlayground; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF1FF60204212E0003C700C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +61,7 @@
 		1FF1FF5F204212E0003C700C /* CppPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				1F5923432066FEA900F645DB /* fakeit.hpp */,
 				1FF1FF60204212E0003C700C /* main.cpp */,
 				1F558B22205E7DB50049DD5F /* threading.cpp */,
 				1F558B23205E7DB50049DD5F /* threading.hpp */,
