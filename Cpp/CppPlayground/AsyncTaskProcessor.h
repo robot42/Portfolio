@@ -3,6 +3,7 @@
 #include <queue>
 #include <memory>
 #include <mutex>
+#include <atomic>
 
 class ITask;
 
@@ -23,5 +24,6 @@ private:
 	std::queue<std::shared_ptr<ITask>> taskQueue;
 	std::mutex taskQueueMutex;
 	std::thread executionThread;
+	std::atomic<bool> isShuttingDown;
 };
 

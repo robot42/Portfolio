@@ -5,11 +5,14 @@
 using namespace std;
 
 AsyncTaskProcessor::AsyncTaskProcessor()
+	: isShuttingDown(false)
 {
 }
 
 AsyncTaskProcessor::~AsyncTaskProcessor()
 {
+	this->isShuttingDown = true;
+
 	if (this->executionThread.joinable())
 	{
 		this->executionThread.join();
@@ -18,7 +21,7 @@ AsyncTaskProcessor::~AsyncTaskProcessor()
 
 void AsyncTaskProcessor::Enqueue(shared_ptr<ITask> task)
 {
-	if (task == nullptr)
+	if (task == nullptr || this->isShuttingDown)
 	{
 		return;
 	}
