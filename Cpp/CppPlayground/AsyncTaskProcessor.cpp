@@ -1,24 +1,30 @@
 #include "AsyncTaskProcessor.h"
 #include "ITask.h"
+#include <ppltasks.h>
 #include <future>
 
 using namespace std;
 
 AsyncTaskProcessor::AsyncTaskProcessor()
+	: isShuttingDown(false)
+	, asyncExecution([]() {})
 {
 }
 
 AsyncTaskProcessor::~AsyncTaskProcessor()
 {
-	if (this->executionThread.joinable())
-	{
-		this->executionThread.join();
-	}
+	this->isShuttingDown = true;
+	this->asyncExecution.wait();
+
+	//if (this->executionThread.joinable())
+	//{
+	//	this->executionThread.join();
+	//}
 }
 
 void AsyncTaskProcessor::Enqueue(shared_ptr<ITask> task)
 {
-	if (task == nullptr)
+	if (task == nullptr || this->isShuttingDown)
 	{
 		return;
 	}
@@ -33,12 +39,7 @@ void AsyncTaskProcessor::Enqueue(shared_ptr<ITask> task)
 		}
 	}
 
-	if (this->executionThread.joinable())
-	{
-		this->executionThread.join();
-	}
-
-	this->executionThread = thread([this]()
+	this->asyncExecution = this->asyncExecution.then([this]()
 	{
 		this->ExecuteTasks();
 	});
