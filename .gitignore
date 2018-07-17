@@ -6,3 +6,14 @@
 bin/
 obj/
 build/
+*.ipch
+Cpp/CppPlayground/.vs/CppPlayground/v15/.suo
+*.db
+*.opendb
+*.user
+*.exe
+*.log
+*.obj
+*.tlog
+*.pdb
+*.ilk

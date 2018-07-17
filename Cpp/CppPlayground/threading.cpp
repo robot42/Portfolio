@@ -6,8 +6,6 @@
 //  Copyright © 2018 rico. All rights reserved.
 //
 
-#include "threading.hpp"
-
 #include <future>
 #include <string>
 #include <iostream>
