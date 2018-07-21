@@ -102,15 +102,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncTaskProcessor.cpp" />
+    <ClCompile Include="Concurrency\AsyncTaskProcessor.cpp" />
+    <ClCompile Include="Concurrency\AsyncTaskProcessorFactory.cpp" />
+    <ClCompile Include="Concurrency\ITaskProcessor.h" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Concurrency\SyncTaskProcessor.cpp" />
+    <ClCompile Include="Concurrency\SyncTaskProcessorFactory.cpp" />
     <ClCompile Include="threading.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AsyncTaskProcessor.h" />
-    <ClInclude Include="CppPlayground\ITask.h" />
+    <ClInclude Include="Concurrency\AsyncTaskProcessor.h" />
+    <ClInclude Include="Concurrency\AsyncTaskProcessorFactory.h" />
     <ClInclude Include="fakeit.hpp" />
-    <ClInclude Include="Task.h" />
+    <ClInclude Include="Concurrency\ITask.h" />
+    <ClInclude Include="Concurrency\ITaskProcessorFactory.h" />
+    <ClInclude Include="Concurrency\Task.h" />
+    <ClInclude Include="Concurrency\SyncTaskProcessor.h" />
+    <ClInclude Include="Concurrency\SyncTaskProcessorFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

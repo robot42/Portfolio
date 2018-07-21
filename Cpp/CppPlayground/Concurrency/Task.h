@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ITask.h"
-#include <ppl.h>
 #include <future>
 
 template<typename T>
@@ -28,4 +27,3 @@ private:
 	std::promise<T> promise;
 	std::future<T> future;
 };
-

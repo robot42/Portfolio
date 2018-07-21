@@ -1,20 +1,18 @@
 #pragma once
 
+#include "ITaskProcessor.h"
 #include <queue>
-#include <memory>
 #include <mutex>
 #include <atomic>
 #include <ppltasks.h>
 
-class ITask;
-
-class AsyncTaskProcessor
+class AsyncTaskProcessor : public ITaskProcessor
 {
 public:
 	AsyncTaskProcessor();
-	virtual ~AsyncTaskProcessor();
+	virtual ~AsyncTaskProcessor() override;
 
-	void Enqueue(std::shared_ptr<ITask> task);
+	virtual void Enqueue(std::shared_ptr<ITask> task) override;
 
 private:
 	AsyncTaskProcessor(const AsyncTaskProcessor&) = delete;
