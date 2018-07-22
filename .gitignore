@@ -6,6 +6,7 @@
 bin/
 obj/
 build/
+**/packages/*
 *.ipch
 Cpp/CppPlayground/.vs/CppPlayground/v15/.suo
 *.db
