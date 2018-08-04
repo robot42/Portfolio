@@ -18,3 +18,8 @@ Cpp/CppPlayground/.vs/CppPlayground/v15/.suo
 *.tlog
 *.pdb
 *.ilk
+*.lock
+*.ide
+*.ide-shm
+ComputerUptime/.vs/ComputerUptime/v15/.suo
+*.ide-wal

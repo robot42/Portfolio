@@ -22,6 +22,7 @@ struct SomeInterface
     virtual int bar(string) = 0;
 };
 
+
 void test_test()
 {
     Mock<SomeInterface> mock;
