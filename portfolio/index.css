@@ -1,0 +1,329 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+body
+{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #373C4F;
+  color: #373C4F;
+  display: flex;
+  justify-content: center;
+}
+
+h1
+{
+  font-size: 49px;
+  line-height: 49px;
+  text-align: center;
+  font-weight: 900;
+}
+
+h1 > span
+{
+    background-image: linear-gradient(transparent 60%, #60DC8E 55%);
+}
+
+h2
+{
+  font-size: 31px;
+  line-height: 2rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.content
+{
+  width: 900px;
+}
+
+.light-text
+{
+  color: #fdfbf9;
+}
+
+header
+{
+  display: grid;
+  grid-template-columns: 18px 116px 116px 116px 116px 116px 116px 18px;
+  grid-template-rows: 48px auto 96px auto 96px 48px 48px;
+  grid-column-gap: 24px;
+}
+
+#header-background-image {
+  grid-row: 1 / 7;
+  grid-column: 1 / 9;
+  background-image: url("keyboard1.jpg");
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#header-background {
+  grid-row: 1 / 7;
+  grid-column: 1 / 9;
+  background: linear-gradient(#60DC8Ee6, #00ADA1e6);
+}
+
+#header {
+  grid-row: 2 / 3;
+  grid-column: 2 / 5;
+}
+
+#header-greeting {
+  margin-bottom: 1em;
+}
+
+#header-intro {
+  font-size: 1.56em;
+  line-height: 1.25em;
+  font-weight: 900;
+}
+
+#header-mission {
+  grid-row: 4 / 5;
+  grid-column: 2 / 5;
+}
+
+#header-portrait {
+  grid-row: 1 / 7;
+  grid-column: 6 / 9;
+  margin-left: -50px;
+  background-image: url("passbild.jpg");
+}
+
+#header-address {
+  grid-row: 6 / 8;
+  grid-column: 3 / 7;
+  background-color: #F7CA50;
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 0px rgba(0,0,0,0.2);
+
+  text-align: center;
+  font-style: normal;
+  padding-top: 35px;
+}
+
+#header-finish
+{
+  grid-row: 7 / 8;
+  grid-column: 1 / 9;
+  background-color: #F1F0F4;
+}
+
+/* values section */
+
+.values
+{
+  display: grid;
+  grid-template-columns: 18px 116px 116px 116px 116px 116px 116px 18px;
+  grid-template-rows: 96px auto 48px auto 48px auto 96px;
+  grid-column-gap: 24px;
+  background-color: #F1F0F4;
+}
+
+.decorated::before
+{
+  content: "[ ";
+  color: #60DC8E;
+}
+
+.decorated::after
+{
+  content: " ]";
+  color: #60DC8E;
+}
+
+#value-problem-header
+{
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+}
+
+#value-problem-text
+{
+  grid-row: 2 / 3;
+  grid-column: 4 / 8;
+}
+
+#value-listen-header
+{
+  grid-row: 4 / 5;
+  grid-column: 2 / 4;
+}
+
+#value-listen-text
+{
+  grid-row: 4 / 5;
+  grid-column: 4 / 8;
+}
+
+#value-involved-header
+{
+  grid-row: 6 / 7;
+  grid-column: 2 / 4;
+}
+
+#value-involved-text
+{
+  grid-row: 6 / 7;
+  grid-column: 4 / 8;
+}
+
+/* skills section */
+
+.skills
+{
+  display: grid;
+  grid-template-columns: 18px 116px 116px 116px 116px 116px 116px 18px;
+  grid-template-rows: 96px auto 48px auto 48px auto 96px;
+  grid-column-gap: 24px;
+  background-color: white;
+}
+
+#skills-headline
+{
+  grid-row: 2 / 3;
+  grid-column: 3 / 7;
+  text-align: center;
+}
+
+#skills-study
+{
+  grid-row: 4 / 5;
+  grid-column: 3 / 7;
+}
+
+#skills-chips
+{
+  grid-row: 6 / 7;
+  grid-column: 3 / 7;
+  line-height: 3em;
+}
+
+#skills-chips > span
+{
+  white-space: nowrap;
+  padding: 8px;
+  border: solid 1px #CCCCCC;
+  border-radius: 5px;
+  margin-right: .5em;
+}
+
+/* section samples */
+
+.samples
+{
+  display: grid;
+  /* display: grid; */
+  
+  grid-template-columns: 18px 116px 116px 116px 116px 116px 116px 18px;
+  grid-template-rows: 96px auto 48px auto 48px auto 48px auto 96px;
+  grid-column-gap: 24px;
+  background-color: #F1F0F4;
+}
+
+#samples-headline
+{
+  grid-row: 2 / 3;
+  grid-column: 3 / 7;
+  text-align: center;
+}
+
+#sample1-image
+{
+  grid-row: 4 / 5;
+  grid-column: 2 / 4;
+}
+
+#sample1
+{
+  grid-row: 4 / 5;
+  grid-column: 4 / 8;
+}
+
+#sample2-image
+{
+  grid-row: 6 / 7;
+  grid-column: 2 / 4;
+}
+
+#sample2
+{
+  grid-row: 6 / 7;
+  grid-column: 4 / 8;
+}
+
+#sample3-image
+{
+  grid-row: 8 / 9;
+  grid-column: 2 / 4;
+  height: 128px;
+}
+
+#sample3
+{
+  grid-row: 8 / 9;
+  grid-column: 4 / 8;
+}
+
+.sample-description {
+  margin-top: .5em;
+}
+
+.company-benefits
+{
+  margin-top: .5em;
+}
+
+.company-benefits::before {
+  content: "Company benefits - ";
+  font-weight: bold;
+}
+
+.personal-benefits
+{
+  margin-top: .5em;
+}
+
+.personal-benefits::before {
+  content: "What I learned - ";
+  font-weight: bold;
+}
+
+
+/* section footer */
+
+#footer {
+  display: grid;
+  grid-template-columns: 18px 116px 116px 116px 116px 116px 116px 18px;
+  grid-template-rows: 96px auto 48px auto 96px;
+  grid-column-gap: 24px;
+  background: linear-gradient(to bottom, #60DC8E 0%, #00ADA1 100%);
+}
+
+#footer-headline
+{
+  grid-row: 2 / 3;
+  grid-column: 3 / 7;
+  text-align: center;
+}
+
+#footer-cta
+{
+  grid-row: 4 / 5;
+  grid-column: 4 / 6;
+
+  background-color: #F7CA50;
+  border-radius: 5px;
+  box-shadow: 2px 3px 6px 0px rgba(0,0,0,0.2);
+
+  text-align: center;
+  font-style: normal;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
