@@ -8,7 +8,8 @@
   --background-color2: #fff;
   --background-color3: #ededed;
   --accent-color: #e3b44c;
-  --dark-text-color: rgba(0, 0, 0, 0.85);
+  --dark-headline-color: rgba(0, 0, 0, 0.85);
+  --dark-text-color: rgba(0, 0, 0, 0.67);
   --light-text-color: rgba(255, 255, 255, 0.85);
   --border-color: rgba(0, 0, 0, 0.33);
 }
@@ -19,7 +20,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   background-color: white;
-  color: var(--background-color1);
+  color: var(--dark-text-color);
 }
 
 h1 > span {
@@ -28,10 +29,29 @@ h1 > span {
 
 #skills-chips > span {
   white-space: nowrap;
-  padding: 8px;
+  padding: 8px 14px;
   border: solid 1px var(--border-color);
   border-radius: 5px;
   margin-right: 0.5em;
+}
+
+#sample1-image {
+  background-image: url("sample1.png");
+}
+
+#sample2-image {
+  background-image: url("sample2.jpg");
+}
+
+#sample3-image {
+  background-image: url("sample3.png");
+}
+
+.shadowed-image {
+  width: 256px;
+  height: 128px;
+  box-shadow: inset 0px 0px 10px 0 var(--border-color);
+  border-radius: 5px;
 }
 
 .cta {
@@ -57,22 +77,49 @@ h1 > span {
   color: var(--accent-color);
 }
 
+.sample-description {
+  margin-top: 1em;
+}
+
+.company-benefits {
+  margin-top: 0.5em;
+}
+
+.company-benefits::before {
+  content: "Company benefits - ";
+  font-weight: 700;
+  color: var(--dark-headline-color);
+}
+
+.personal-benefits {
+  margin-top: 0.5em;
+}
+
+.personal-benefits::before {
+  content: "What I learned - ";
+  font-weight: bold;
+  font-weight: 700;
+  color: var(--dark-headline-color);
+}
+
 /* mobile */
 @media only screen and (max-width: 900px) {
   h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 31px;
     line-height: 31px;
     text-align: center;
     font-weight: 600;
+    color: var(--dark-headline-color);
   }
 
   h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 25px;
     line-height: 25px;
     font-weight: 600;
     white-space: nowrap;
+    color: var(--dark-headline-color);
   }
 
   header {
@@ -100,10 +147,14 @@ h1 > span {
     color: var(--light-text-color);
   }
 
+  #header-greeting {
+    margin-bottom: 0.5em;
+  }
+
   #header-intro {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 31px;
-    line-height: 31px;
+    line-height: 1.25em;
     font-weight: 600;
   }
 
@@ -199,7 +250,7 @@ h1 > span {
   .samples {
     display: grid;
     grid-template-columns: 1fr 48px 65% 48px 1fr;
-    grid-template-rows: 72px auto 73px auto 24px auto 72px auto 24px auto 72px auto 24px auto 72px;
+    grid-template-rows: 72px auto 72px auto 24px auto 72px auto 24px auto 72px auto 24px auto 72px;
     grid-column-gap: 0px;
     background-color: var(--background-color2);
   }
@@ -243,28 +294,6 @@ h1 > span {
     grid-column: 2 / 5;
   }
 
-  .sample-description {
-    margin-top: 0.5em;
-  }
-
-  .company-benefits {
-    margin-top: 0.5em;
-  }
-
-  .company-benefits::before {
-    content: "Company benefits - ";
-    font-weight: bold;
-  }
-
-  .personal-benefits {
-    margin-top: 0.5em;
-  }
-
-  .personal-benefits::before {
-    content: "What I learned - ";
-    font-weight: bold;
-  }
-
   /* section footer */
 
   footer {
@@ -291,17 +320,21 @@ h1 > span {
 /* wide screen */
 @media only screen and (min-width: 901px) {
   h1 {
+    font-family: "Oswald", sans-serif;
     font-size: 49px;
     line-height: 49px;
     text-align: center;
-    font-weight: 900;
+    font-weight: 600;
+    color: var(--dark-headline-color);
   }
 
   h2 {
+    font-family: "Oswald", sans-serif;
     font-size: 31px;
     line-height: 2rem;
-    font-weight: 900;
+    font-weight: 600;
     white-space: nowrap;
+    color: var(--dark-headline-color);
   }
 
   header {
@@ -334,9 +367,11 @@ h1 > span {
   }
 
   #header-intro {
-    font-size: 1.56em;
+    font-family: "Oswald", sans-serif;
+    font-size: 31px;
     line-height: 1.25em;
-    font-weight: 900;
+    font-weight: 600;
+    color: var(--light-text-color);
   }
 
   #header-mission {
@@ -484,28 +519,6 @@ h1 > span {
   #sample3 {
     grid-row: 8 / 9;
     grid-column: 4 / 8;
-  }
-
-  .sample-description {
-    margin-top: 0.5em;
-  }
-
-  .company-benefits {
-    margin-top: 0.5em;
-  }
-
-  .company-benefits::before {
-    content: "Company benefits - ";
-    font-weight: bold;
-  }
-
-  .personal-benefits {
-    margin-top: 0.5em;
-  }
-
-  .personal-benefits::before {
-    content: "What I learned - ";
-    font-weight: bold;
   }
 
   /* section footer */
