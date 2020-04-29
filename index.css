@@ -52,11 +52,12 @@ header {
   line-height: 31px;
   margin-top: 8px;
   font-weight: 600;
+  max-width: 550px;
 }
-
 
 header > .mission {
   margin-top: var(--medium-space);
+  max-width: 550px;
 }
 
 h2 {
@@ -80,6 +81,7 @@ h1 {
 }
 
 h1 > span {
+  width: 110%;
   background-image: linear-gradient(transparent 60%, var(--accent-color) 55%);
 }
 
@@ -116,6 +118,10 @@ h1 > span {
   padding-right: var(--small-space);
   max-width: var(--first-breakpoint);
   margin: auto;
+}
+
+.value-text:last-child {
+  margin-bottom: 0px;
 }
 
 /* skills section */
