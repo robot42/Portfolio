@@ -16,6 +16,7 @@
   --small-space: 24px;
   --medium-space: 48px;
   --large-space: 72px;
+  --first-breakpoint: 800px;
 }
 
 body {
@@ -27,16 +28,22 @@ body {
   color: var(--dark-text-color);
 }
 
-header {
-  font-weight: 300;
-  color: var(--light-text-color);
-  padding: var(--large-space) var(--small-space);
+.header-row {
+
   background-image: url("keyboard2.png");
   background-color: var(--background-color1);
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+}
+
+header {
+  font-weight: 300;
+  color: var(--light-text-color);
+  padding: var(--large-space) var(--small-space);
+  max-width: var(--first-breakpoint);
+  margin: auto;
 }
 
 .intro {
@@ -100,28 +107,30 @@ h1 > span {
   color: var(--accent-color);
 }
 
-/* mobile */
-/* @media only screen and (max-width: 900px) { */
-
 /* values section */
 
 .values {
-  display: flex;
-  flex-direction: column;
   padding-top: var(--small-space);
   padding-bottom: var(--large-space);
   padding-left: var(--small-space);
   padding-right: var(--small-space);
+  max-width: var(--first-breakpoint);
+  margin: auto;
 }
 
 /* skills section */
+
+.skills-row {
+  background-color: var(--background-color3);
+}
 
 .skills {
   padding-top: var(--large-space);
   padding-bottom: var(--large-space);
   padding-left: var(--small-space);
   padding-right: var(--small-space);
-  background-color: var(--background-color3);
+  max-width: var(--first-breakpoint);
+  margin: auto;
 }
 
 .skills > p {
@@ -145,6 +154,8 @@ h1 > span {
   padding-bottom: var(--large-space);
   padding-left: var(--small-space);
   padding-right: var(--small-space);
+  max-width: var(--first-breakpoint);
+  margin: auto;
 }
 
 #sample1-image {
@@ -199,4 +210,28 @@ footer {
   background-color: var(--background-color1);
 }
 
-/* } */
+@media only screen and (min-width: 800px) {
+  .values {
+    display: grid;
+    grid-template-columns: max-content auto;
+    padding-top: var(--large-space);
+  }
+
+  .values h2 {
+    margin-top: 0px;
+    margin-right: var(--small-space);
+  }
+
+  .values p {
+    margin-bottom: var(--medium-space);
+  }
+
+  .sample {
+    display: grid;
+    grid-template-columns: max-content auto;
+  }
+
+  .shadowed-image {
+    margin-right: var(--small-space);
+  }
+}
