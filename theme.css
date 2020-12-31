@@ -7,6 +7,7 @@
     --background-color1: #1F2438;
     --background-color2: #fff;
     --background-color3: #ededed;
+    --shadow-color: #cccccc;
     --accent-color: #e3b44c;
     --dark-headline-color: rgba(0, 0, 0, 0.85);
     --dark-text-color: #1F2438;
@@ -19,6 +20,26 @@
     --first-breakpoint: 800px;
   }
   
+  .tiny-spacer {
+    width: var(--tiny-space);
+    height: var(--tiny-space);
+  }
+
+  .small-spacer {
+    width: var(--small-space);
+    height: var(--small-space);
+  }
+
+  .medium-spacer {
+    width: var(--medium-space);
+    height: var(--medium-space);
+  }
+
+  .large-spacer {
+    width: var(--large-space);
+    height: var(--large-space);
+  }
+
   body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -34,11 +55,11 @@
     line-height: 25px;
     font-weight: 600;
     white-space: nowrap;
-    margin-bottom: var(--small-space);
-    margin-top: var(--medium-space);
+    /* margin-bottom: var(--small-space);
+    margin-top: var(--medium-space); */
   }
   
-  .header-row {
+  header {
     background-image: url("keyboard2.png");
     background-color: var(--background-color1);
     background-blend-mode: multiply;
@@ -47,7 +68,7 @@
     background-position: right;
   }
   
-  header {
+  .header-content {
     font-weight: 300;
     color: var(--light-text-color);
     padding: var(--large-space) var(--small-space);
@@ -59,13 +80,11 @@
     font-family: "Oswald", sans-serif;
     font-size: 31px;
     line-height: 31px;
-    margin-top: 8px;
     font-weight: 600;
     max-width: 550px;
   }
   
   header > .mission {
-    margin-top: var(--medium-space);
     max-width: 550px;
   }
 
@@ -80,9 +99,25 @@
     line-height: var(--medium-space);
     font-style: normal;
     font-weight: 400;
-    margin-top: var(--medium-space);
   }
-  
+
+  .light-background {
+    background-color: var(--background-color2);
+  }
+
+  .dark-background {
+    background-color: var(--background-color3);
+  }
+
+  .section-content {
+    padding-top: var(--large-space);
+    padding-bottom: var(--large-space);
+    padding-left: var(--small-space);
+    padding-right: var(--small-space);
+    max-width: var(--first-breakpoint);
+    margin: auto;
+  }
+
   .decorated::before {
     content: "[ ";
     color: var(--accent-color);

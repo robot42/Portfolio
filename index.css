@@ -1,4 +1,4 @@
-@import url("theme.css");
+/* @import url("theme.css"); */
 
 h1 {
   font-family: "Oswald", sans-serif;
@@ -7,7 +7,6 @@ h1 {
   text-align: center;
   font-weight: 600;
   color: var(--dark-headline-color);
-  margin-bottom: var(--large-space);
 }
 
 h1 > span {
@@ -15,42 +14,9 @@ h1 > span {
   background-image: linear-gradient(transparent 60%, var(--accent-color) 55%);
 }
 
-
-/* values section */
-
-.values {
-  padding-top: var(--small-space);
-  padding-bottom: var(--large-space);
-  padding-left: var(--small-space);
-  padding-right: var(--small-space);
-  max-width: var(--first-breakpoint);
-  margin: auto;
-}
-
-.value-text:last-child {
-  margin-bottom: 0px;
-}
-
 /* skills section */
 
-.skills-row {
-  background-color: var(--background-color3);
-}
-
-.skills {
-  padding-top: var(--large-space);
-  padding-bottom: var(--large-space);
-  padding-left: var(--small-space);
-  padding-right: var(--small-space);
-  max-width: var(--first-breakpoint);
-  margin: auto;
-}
-
-.skills > p {
-  margin-bottom: var(--small-space);
-}
-
-.skills li {
+.skills-chips li {
   display: inline-block;
   border: solid 1px var(--border-color);
   white-space: nowrap;
@@ -61,15 +27,6 @@ h1 > span {
 }
 
 /* section samples */
-
-.samples {
-  padding-top: var(--large-space);
-  padding-bottom: var(--large-space);
-  padding-left: var(--small-space);
-  padding-right: var(--small-space);
-  max-width: var(--first-breakpoint);
-  margin: auto;
-}
 
 #sample1-image {
   background-image: url("sample1.png");
@@ -92,18 +49,10 @@ h1 > span {
   margin-bottom: var(--tiny-space);
 }
 
-.company-benefits {
-  margin-top: var(--tiny-space);
-}
-
 .company-benefits::before {
   content: "Company benefits - ";
   font-weight: 700;
   color: var(--dark-headline-color);
-}
-
-.personal-benefits {
-  margin-top: var(--tiny-space);
 }
 
 .personal-benefits::before {
@@ -113,19 +62,29 @@ h1 > span {
 }
 
 /* side projects */
-.side-projects {
-  background-color: var(--background-color3);
-}
 
 .side-project {
-  padding-top: var(--large-space);
-  padding-bottom: var(--large-space);
-  padding-left: var(--small-space);
-  padding-right: var(--small-space);
   max-width: var(--first-breakpoint);
   margin: auto;
   display: grid;
-  grid-template-columns: auto max-content;
+  grid-template-columns: auto auto auto;
+}
+
+.side-project-image {
+  border-radius: 8px;
+  filter: drop-shadow(1px 1px 2px var(--shadow-color));
+}
+
+.side-project-button {
+    display: block;
+    /* background-color: var(--accent-color); */
+    color: var(--dark-text-color);
+    border-radius: 8px;
+    border: solid 1px var(--border-color);
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    line-height: var(--medium-space);
 }
 
 /* section footer */
@@ -153,10 +112,5 @@ h1 > span {
 
   .shadowed-image {
     margin-right: var(--small-space);
-  }
-
-  .side-project {
-    display: grid;
-    grid-template-columns: auto max-content;
   }
 }

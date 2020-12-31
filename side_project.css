@@ -18,19 +18,21 @@
   }
   
   .side-project-image {
-    padding-top: var(--small-space);
-    padding-bottom: var(--small-space);
-    padding-left: var(--small-space);
-    padding-right: var(--small-space);
-    background-color: var(--background-color3);
     text-align: center;
   }
   
   .side-project-image > img {
-    max-width: 585px;
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+
+  #side_project_icons_img {
+    max-width: 585px;
+  }
+
+  #side_project_icons_new_img {
+    max-width: 736px;
   }
 
   ol {
@@ -46,5 +48,5 @@
   }
 
   li:last-child {
-    padding-bottom: var(--small-space);
+    padding-bottom: 0;
   }
