@@ -1,0 +1,50 @@
+@import url("theme.css");
+
+.side-project {
+    padding-top: var(--small-space);
+    padding-bottom: var(--small-space);
+    padding-left: var(--small-space);
+    padding-right: var(--small-space);
+    max-width: var(--first-breakpoint);
+    margin: auto;
+  }
+  
+  .side-project > p {
+    padding-bottom: var(--small-space);
+  }
+
+  .side-project > p:last-child {
+    padding-bottom: 0;
+  }
+  
+  .side-project-image {
+    padding-top: var(--small-space);
+    padding-bottom: var(--small-space);
+    padding-left: var(--small-space);
+    padding-right: var(--small-space);
+    background-color: var(--background-color3);
+    text-align: center;
+  }
+  
+  .side-project-image > img {
+    max-width: 585px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  ol {
+      margin-left: var(--medium-space);
+  }
+
+  ul {
+    margin-left: var(--medium-space);
+    }
+
+  li {
+      padding-bottom: 8px;
+  }
+
+  li:last-child {
+    padding-bottom: var(--small-space);
+  }

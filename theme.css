@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  :root {
+    --background-color1: #1F2438;
+    --background-color2: #fff;
+    --background-color3: #ededed;
+    --accent-color: #e3b44c;
+    --dark-headline-color: rgba(0, 0, 0, 0.85);
+    --dark-text-color: #1F2438;
+    --light-text-color: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(0, 0, 0, 0.33);
+    --tiny-space: 8px;
+    --small-space: 24px;
+    --medium-space: 48px;
+    --large-space: 72px;
+    --first-breakpoint: 800px;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: white;
+    color: var(--dark-text-color);
+  }
+
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-bottom: var(--small-space);
+    margin-top: var(--medium-space);
+  }
+  
+  .header-row {
+    background-image: url("keyboard2.png");
+    background-color: var(--background-color1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  
+  header {
+    font-weight: 300;
+    color: var(--light-text-color);
+    padding: var(--large-space) var(--small-space);
+    max-width: var(--first-breakpoint);
+    margin: auto;
+  }
+  
+  .intro {
+    font-family: "Oswald", sans-serif;
+    font-size: 31px;
+    line-height: 31px;
+    margin-top: 8px;
+    font-weight: 600;
+    max-width: 550px;
+  }
+  
+  header > .mission {
+    margin-top: var(--medium-space);
+    max-width: 550px;
+  }
+
+  .cta {
+    display: block;
+    background-color: var(--accent-color);
+    color: var(--dark-text-color);
+    border-radius: 5px;
+    width: 264px;
+    text-align: center;
+    text-decoration: none;
+    line-height: var(--medium-space);
+    font-style: normal;
+    font-weight: 400;
+    margin-top: var(--medium-space);
+  }
+  
+  .decorated::before {
+    content: "[ ";
+    color: var(--accent-color);
+  }
+  
+  .decorated::after {
+    content: " ]";
+    color: var(--accent-color);
+  }
+  
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: var(--light-text-color);
+    padding: var(--large-space) var(--small-space);
+    background-color: var(--background-color1);
+  }
