@@ -1,0 +1,52 @@
+@import url("theme.css");
+
+.side-project {
+    padding-top: var(--small-space);
+    padding-bottom: var(--small-space);
+    padding-left: var(--small-space);
+    padding-right: var(--small-space);
+    max-width: var(--first-breakpoint);
+    margin: auto;
+  }
+  
+  .side-project > p {
+    padding-bottom: var(--small-space);
+  }
+
+  .side-project > p:last-child {
+    padding-bottom: 0;
+  }
+  
+  .side-project-image {
+    text-align: center;
+  }
+  
+  .side-project-image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  #side_project_icons_img {
+    max-width: 585px;
+  }
+
+  #side_project_icons_new_img {
+    max-width: 736px;
+  }
+
+  ol {
+      margin-left: var(--medium-space);
+  }
+
+  ul {
+    margin-left: var(--medium-space);
+    }
+
+  li {
+      padding-bottom: 8px;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
+  }

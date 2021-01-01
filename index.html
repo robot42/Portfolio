@@ -8,66 +8,81 @@
       href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="theme.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Enrico H&uuml;ttig | Software Engineer</title>
   </head>
 
   <body>
-    <div class="header-row">
       <header>
+        <div class="header-content">
         <p>Hi, my name is Enrico H&uuml;ttig.</p>
+        <div class="tiny-spacer"></div>
         <p class="intro">
           I am an open-minded and curious software engineer.
         </p>
+        <div class="medium-spacer"></div>
         <p class="mission">
           My goal is to help people to work with complex machines in an easy and
           beautiful way.
         </p>
+        <div class="medium-spacer"></div>
         <a
           class="cta"
           href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;"
           >&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;</a
         >
-      </header>
-    </div>
+    </div> 
+  </header>
 
-    <div class="values-row">
-      <div class="values">
+    <section class="light-background">
+      <div class="section-content">
+        <div class="value">
         <h2 class="decorated">I solve problems</h2>
-        <p class="value-text">
+        <div class="small-spacer"></div>
+        <p>
           The trick is to break big problems down into smaller and independent
           pieces. Then I prioritize all the little problems and try to find a
           simple solution for all of them. It is sometimes necessary for me to
           extend my knowledge or even learn new skills in the process.
         </p>
+      </div>
+        <div class="medium-spacer"></div>
 
+        <div class="value">
         <h2 class="decorated">I listen</h2>
-        <p class="value-text">
+        <div class="small-spacer"></div>
+        <p>
           It‘s not always easy to articulate ideas or thoughts. But it‘s
           important to understand the stakeholder‘s needs and also listen to
           feedback during the design and development iterations.
         </p>
+      </div>
 
+        <div class="medium-spacer"></div>
+        <div class="value">
         <h2 class="decorated">I am involved</h2>
-        <p class="value-text">
+        <div class="small-spacer"></div>
+        <p>
           Work is more than just doing the things I am supposed to do. Currently
           I support the HR department and interview job candidates about their
           technical skills. I give on-the-job training to new coworkers and
           train customers.
         </p>
       </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="skills-row">
-      <div class="skills">
+    <section class="dark-background">
+      <div class="section-content">
         <h1><span>Education and Skills</span></h1>
-
+        <div class="large-spacer"></div>
         <p>
           Study of physics at the Technical University of Dresden from 1991 to
           1997, specialization in semiconductor physics and optics
         </p>
-
-        <ul id="skills-chips">
+        <div class="medium-spacer"></div>
+        <ul class="skills-chips">
           <li>Factory Automation</li>
           <li>Testing</li>
           <li>SEMI Standards</li>
@@ -90,24 +105,29 @@
           <li>Learning</li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="samples-row">
-      <div class="samples">
+    <section class="light-background">
+      <div class="section-content">
         <h1><span>Work Samples</span></h1>
+        <div class="large-spacer"></div>
         <h2 class="decorated">Resource Planning &amp; Management</h2>
+        <div class="small-spacer"></div>
         <div class="sample">
-          <div id="sample1-image" class="shadowed-image"></div>
+          <img src="sample1.png" class="shadowed-image"></img>
+          <div class="tiny-spacer"></div>
           <div>
             <p>
               Standalone application for production planning and optimization,
               advance calculation of resource allocation, evaluation according
               to various criteria. (2003)
             </p>
+            <div class="small-spacer"></div>
             <p class="company-benefits">
               new application as extesion to an existing product family,
               introduction of C# as a modern programming language.
             </p>
+            <div class="small-spacer"></div>
             <p class="personal-benefits">
               design patterns, unit tests, performance analysis and
               optimization.
@@ -115,37 +135,48 @@
           </div>
         </div>
 
+        <div class="large-spacer"></div>
         <h2 class="decorated">Manufacturing Execution System</h2>
+        <div class="small-spacer"></div>
         <div class="sample">
-          <div id="sample2-image" class="shadowed-image"></div>
+          <img src="sample2.jpg" class="shadowed-image"></img>
+          <div class="tiny-spacer"></div>
           <div>
             <p>
               Development and commissioning of MES software for production of
               solar cell and solar receivers. The software was deployed in
               Taiwan, Thailand, Spain, and the USA. (2010)
             </p>
+            <div class="small-spacer"></div>
             <p class="company-benefits">
               worldwide use of a new product, establish and improve process for
               software versioning.
             </p>
+            <div class="small-spacer"></div>
             <p class="personal-benefits">
               international project experience, English language.
             </p>
           </div>
         </div>
+
+        <div class="large-spacer"></div>
         <h2 class="decorated">Equipment Control</h2>
+        <div class="small-spacer"></div>
         <div class="sample">
-          <div id="sample3-image" class="shadowed-image"></div>
+          <img src="sample3.png" class="shadowed-image"></img>
+          <div class="tiny-spacer"></div>
           <div>
             <p>
               Extension, modernization and maintenance of existing software.
               Create the ability to migrate between different software releases.
               (2015)
             </p>
+            <div class="small-spacer"></div>
             <p class="company-benefits">
               software product becomes more reliable and stable, shorter and
               easier update process.
             </p>
+            <div class="small-spacer"></div>
             <p class="personal-benefits">
               requirements engineering, test automation, usability engineering,
               agile development, SCRUM master.
@@ -153,17 +184,37 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content">
+      <h1><span>Side Projects</span></h1>
+      <div class="large-spacer"></div>
+      <h2 class="decorated">Icon Set</h2>
+      <div class="small-spacer"></div>
+      <div class="side-project">  
+        <div>
+          <p>
+            A custom icon set for a tool control software library. The previouse version of the software library used bitmap images with a fixed size. But WPF provides the Path Markup Syntax to create scalable icons. I wanted to learn and explore this new markup language. (2020)
+          </p>
+          <div class="small-spacer"></div>
+          <a class="side-project-button" href="side_project_icons.html">Read More &gt;</a>
+        </div>
+        <div class="small-spacer"></div>
+        <img src="side_project_icons_preview.png" class="shadowed-image"></img>
+      </div>
     </div>
+    </section>
 
     <footer>
       <p class="intro">
         Let's make great things together.
       </p>
+      <div class="medium-spacer"></div>
       <a
         class="cta"
         href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;"
-        >SEND ME AN EMAIL</a
-      >
+        >SEND ME AN EMAIL</a>
     </footer>
   </body>
 </html>
