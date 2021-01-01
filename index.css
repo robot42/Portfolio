@@ -31,6 +31,7 @@ h1 > span {
 .shadowed-image {
   border-radius: 8px;
   filter: drop-shadow(2px 2px 5px var(--shadow-color));
+  border: 1px solid var(--image-border-color);
 }
 
 .company-benefits::before {
@@ -54,16 +55,15 @@ h1 > span {
   grid-template-columns: auto auto auto;
 }
 
-.side-project-button {
-    display: block;
-    /* background-color: var(--accent-color); */
-    color: var(--dark-text-color);
-    border-radius: 8px;
-    border: solid 1px var(--border-color);
-    width: 160px;
-    text-align: center;
-    text-decoration: none;
-    line-height: var(--medium-space);
+.side-project-link {
+  display: block;
+  color: var(--dark-text-color);
+  text-decoration: none;
+}
+
+.read-more {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 800px) {
