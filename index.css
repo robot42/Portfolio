@@ -28,25 +28,9 @@ h1 > span {
 
 /* section samples */
 
-#sample1-image {
-  background-image: url("sample1.png");
-}
-
-#sample2-image {
-  background-image: url("sample2.jpg");
-}
-
-#sample3-image {
-  background-image: url("sample3.png");
-}
-
 .shadowed-image {
-  width: 256px;
-  height: 128px;
-  box-shadow: inset 0px 0px 10px 0 var(--border-color);
-  border-radius: 5px;
-  background-position: left;
-  margin-bottom: var(--tiny-space);
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 5px var(--shadow-color));
 }
 
 .company-benefits::before {
@@ -70,11 +54,6 @@ h1 > span {
   grid-template-columns: auto auto auto;
 }
 
-.side-project-image {
-  border-radius: 8px;
-  filter: drop-shadow(1px 1px 2px var(--shadow-color));
-}
-
 .side-project-button {
     display: block;
     /* background-color: var(--accent-color); */
@@ -87,30 +66,14 @@ h1 > span {
     line-height: var(--medium-space);
 }
 
-/* section footer */
-
 @media only screen and (min-width: 800px) {
-  .values {
+  .value {
     display: grid;
-    grid-template-columns: max-content auto;
-    padding-top: var(--large-space);
-  }
-
-  .values h2 {
-    margin-top: 0px;
-    margin-right: var(--small-space);
-  }
-
-  .values p {
-    margin-bottom: var(--medium-space);
+    grid-template-columns: 200px auto auto;
   }
 
   .sample {
     display: grid;
-    grid-template-columns: max-content auto;
-  }
-
-  .shadowed-image {
-    margin-right: var(--small-space);
+    grid-template-columns: max-content var(--small-space) auto;
   }
 }
