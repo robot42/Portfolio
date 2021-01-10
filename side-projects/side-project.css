@@ -1,5 +1,3 @@
-@import url("theme.css");
-
 .side-project {
     padding-top: var(--small-space);
     padding-bottom: var(--small-space);
@@ -33,6 +31,10 @@
 
   #side_project_icons_new_img {
     max-width: 736px;
+  }
+
+  #test_coverage_img {
+    max-width: 704px;
   }
 
   ol {
