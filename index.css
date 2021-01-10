@@ -51,6 +51,7 @@ h1 > span {
   display: block;
   color: var(--dark-text-color);
   text-decoration: none;
+  outline: none;
 }
 
 .read-more {
