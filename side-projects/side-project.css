@@ -33,6 +33,10 @@
     max-width: 736px;
   }
 
+  #test_coverage_img {
+    max-width: 704px;
+  }
+
   ol {
       margin-left: var(--medium-space);
   }

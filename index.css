@@ -26,12 +26,6 @@ h1 > span {
 
 /* section samples */
 
-.shadowed-image {
-  border-radius: 8px;
-  filter: drop-shadow(2px 2px 5px var(--shadow-color));
-  border: 1px solid var(--image-border-color);
-}
-
 .company-benefits::before {
   content: "Company benefits - ";
   font-weight: 700;

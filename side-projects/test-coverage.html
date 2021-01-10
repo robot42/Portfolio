@@ -26,23 +26,166 @@
 
     <section class="light-background">
       <div class="section-content">
-        <h2 class="decorated">The Starting Point</h2>
-        <div class="small-spacer"></div>
         <p>
-          Software for tool automation is not known for it‘s style and beauty.
-          But t the tool operators and engineers have to use this software every
-          day. The software should be easy to unterstand and icons can make it
-          easier to recognize functions behind buttons without reading the label
-          on the button.
+          Some software developers like testing, others try to avoid it. I use
+          it since the year 2000 in different ways. Test Driven Development
+          seems to work best for me. It gives me a clear goal and I know when I
+          finished a peace of softeware. But I often encounter discussions at
+          work where developers use testing as a currency and try to bargain
+          with the product owner: "If you want to have the feature by the end of
+          next week I can only have 20% test coverage."
         </p>
         <div class="small-spacer"></div>
         <p>
-          Unfortunately every developer has different style preferences and
-          sources for icons. This leads to an inkonsistent set of icons. Let‘s
-          have a look at the icons that we are using currently.
+          I see high test coverage as an integral part of good software and not
+          something optional. So I decided to take it to the next level. Is it
+          possible to have 100% test coverage all the time.
+        </p>
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Definition</h2>
+        <div class="small-spacer"></div>
+        <p>
+          We need some definitions first. What do I mean when I use the words
+          &quot;test&quot; and &quot;coverage&quot; and &quot;all the time&quot;
+          and &quot;100%&quot;?
+        </p>
+        <div class="small-spacer"></div>
+        <p>
+          Software can be tested with unit tests, integration tests and some
+          other forms of tests. It turned out that the best way for my project
+          is a mixture of unit tests and system test. Then I tried to cover
+          every requirement and every line of code with at least one test. This
+          is my definition of 100%. And I am not allowed to commit my changes
+          until I reached my desired test coverage.
+        </p>
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Select a project</h2>
+        <div class="small-spacer"></div>
+        <ul>
+          <li>
+            Not too small - it should need to take a couple of days or weeks to
+            implement to see if my goal can be kept over time.
+          </li>
+          <li>
+            Not too large - it should not be discouragingly complex for one
+            programmer.
+          </li>
+          <li>
+            A real world problem - it should not be too abstract or overly
+            theoretical to prove that the goal can be achieved in my everyday
+            work.
+          </li>
+          <li>
+            Well-defined - I do not want to spend much time on requirements
+            engineering.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content">
+        <p>
+          Technical detail - I chose to implement a machine communication
+          protocol from the semiconductor industry. It's called SECS/GEM. This
+          protocol is well-defined by several standard documents for many
+          decades. Don't worry if you have never heard of this before. It is not
+          important to understand the rest of this article.
         </p>
       </div>
     </section>
+
+    <section class="light-background">
+      <div class="section-content">
+        <h2 class="decorated">Tools</h2>
+        <div class="small-spacer"></div>
+        <p>
+          I used C# and Visual Studio for Mac for the implementation. The
+          packages xUnit and FluentAssertions where used for the tests. The test
+          coverage was measured using coverlet.collector. This package generates
+          just one number for the test coverage of my project. This is exactly
+          what I needed. And I used the pacages SimpleTCP and Stateless to make
+          my implementation easier.
+        </p>
+      </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content side-project-image">
+        <img src="test-coverage.png" id="test_coverage_img" class="shadowed-image" />
+      </div>
+    </section>
+
+    <section class="light-background">
+      <div class="section-content">
+        <h2 class="decorated">Process</h2>
+        <div class="small-spacer"></div>
+        <p>
+          I know the project that I chose very well. So I was able to skip the
+          investigation to make myself familliar with the topic. The first step
+          was to break the whole work down into smaller pieces. Every piece
+          should take about 2 to 6 hours to implement. This size is usable for
+          me because I do it as a side project. I can spend 2 hours in the
+          evening during the week and probably up to 6 hours during a weekend.
+          Then I prioritized the small tasks and created a new repository on
+          GitHub. Then I implemented the software according to my priority list.
+          After one task was finished I reviewed my plan and made adjustments.
+        </p>
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Results</h2>
+        <div class="small-spacer"></div>
+        <p>
+          Summary: It is possible to achieve and maintain 100% test coverage
+          with the setup that I chose. Here is a list of things that I learned
+          during the implementation.
+        </p>
+        <div class="small-spacer"></div>
+        <ul>
+          <li>
+            Create a software design before you start to type and identify the
+            parts that you need to mock.
+          </li>
+          <li>
+            Develop the application by implementing one feature after the other,
+            not one layer after the other. This will make it less likely to
+            rewrite tests and write mocks that you will not need in the end.
+          </li>
+          <li>
+            Write tests for your error handling. Programmers often live in a
+            universe where the software always works. But error handling is a
+            part of the software that must be designed and tested as well.
+          </li>
+          <li>
+            Write the system test first. These tests are the representation of
+            the functional requirements in your source code. Then add your
+            implementation and then add the code for the mocks. And do not add
+            code that is not required for the test. It's tempting because you
+            might think that you need it for the next test anyway. But we want
+            to have your 100% coverage and as little code as possible.
+          </li>
+          <li>
+            Do you have a part of your software system that is only used by
+            other parts but does not depend on anything? Then write unit tests
+            instead of system tests.
+          </li>
+          <li>
+            My usual reaction to line of code without a test was: &quot;Ok, I
+            need to write another test.&quot;. But this changed to &quot;Am I
+            missing a requirement? Do I really need this code? Did I write it
+            out of habit?&quot;
+          </li>
+        </ul>
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Final Thoughts</h2>
+        <div class="small-spacer"></div>
+        <p>
+          The most important requirement to work with 100% test coverage is the
+          commitment of all people who are involved. Especially the software
+          developers need to see the tests as a value, not a burden.
+        </p>
+      </div>
+    </section>
+
     <footer>
       <a class="cta" href="../index.html">&lt; Go Back</a>
     </footer>
