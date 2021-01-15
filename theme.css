@@ -8,7 +8,8 @@
   --background-color2: #fff;
   --background-color3: #ededed;
   --shadow-color: #cccccc;
-  --accent-color: #e3b44c;
+  --accent-color1: #d1ad73;
+  --accent-color2: #ead3a9;
   --dark-headline-color: rgba(0, 0, 0, 0.85);
   --dark-text-color: #1f2438;
   --light-text-color: rgba(255, 255, 255, 0.85);
@@ -43,7 +44,7 @@
 
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   line-height: 24px;
   background-color: white;
@@ -51,13 +52,11 @@ body {
 }
 
 h2 {
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   font-size: 25px;
   line-height: 25px;
-  font-weight: 600;
+  font-weight: 300;
   white-space: nowrap;
-  /* margin-bottom: var(--small-space);
-    margin-top: var(--medium-space); */
 }
 
 header {
@@ -70,18 +69,18 @@ header {
 }
 
 .header-content {
-  font-weight: 300;
-  color: var(--light-text-color);
+  font-weight: 100;
+  color: var(--accent-color1);
   padding: var(--large-space) var(--small-space);
   max-width: var(--first-breakpoint);
   margin: auto;
 }
 
 .intro {
-  font-family: "Oswald", sans-serif;
-  font-size: 31px;
-  line-height: 31px;
-  font-weight: 600;
+  /* font-family: "Oswald", sans-serif; */
+  font-size: 49px;
+  line-height: 49px;
+  font-weight: 300;
   max-width: 550px;
 }
 
@@ -91,7 +90,7 @@ header > .mission {
 
 .cta {
   display: block;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color1);
   color: var(--dark-text-color);
   border-radius: 5px;
   width: 264px;
@@ -99,7 +98,7 @@ header > .mission {
   text-decoration: none;
   line-height: var(--medium-space);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .light-background {
@@ -120,13 +119,13 @@ header > .mission {
 }
 
 .decorated::before {
-  content: "[ ";
-  color: var(--accent-color);
+  content: "{ ";
+  color: var(--accent-color1);
 }
 
 .decorated::after {
-  content: " ]";
-  color: var(--accent-color);
+  content: " }";
+  color: var(--accent-color1);
 }
 
 .shadowed-image {

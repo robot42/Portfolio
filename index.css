@@ -1,15 +1,15 @@
 h1 {
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   font-size: 31px;
   line-height: 31px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 300;
   color: var(--dark-headline-color);
 }
 
 h1 > span {
   width: 110%;
-  background-image: linear-gradient(transparent 60%, var(--accent-color) 55%);
+  background-image: linear-gradient(transparent 60%, var(--accent-color2) 55%);
 }
 
 /* skills section */
