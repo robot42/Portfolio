@@ -1,11 +1,4 @@
-h1 {
-  /* font-family: "Oswald", sans-serif; */
-  font-size: 31px;
-  line-height: 31px;
-  text-align: center;
-  font-weight: 300;
-  color: var(--dark-headline-color);
-}
+
 
 h1 > span {
   width: 110%;
@@ -55,7 +48,6 @@ h1 > span {
 }
 
 .read-more {
-  font-weight: 700;
   text-decoration: underline;
 }
 

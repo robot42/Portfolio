@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Oswald:600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="theme.css" />
   <link rel="stylesheet" type="text/css" href="index.css" />
   <title>Enrico H&uuml;ttig | Software Engineer</title>
@@ -16,9 +15,9 @@
     <div class="header-content">
       <p>Hi, my name is Enrico H&uuml;ttig.</p>
       <div class="tiny-spacer"></div>
-      <p class="intro">
+      <h1>
         I am an open-minded and curious software engineer.
-      </p>
+      </h1>
       <div class="medium-spacer"></div>
       <p class="mission">
         My goal is to help people to work with complex software in an easy and
@@ -33,7 +32,11 @@
   <section class="light-background">
     <div class="section-content">
       <div class="value">
-        <h2 class="decorated">I solve problems</h2>
+        <div>
+          <h2 class="decorated">I solve problems</h2>
+          <div class="small-spacer"></div>
+          <div class="separator"></div>
+        </div>
         <div class="small-spacer"></div>
         <p>
           The trick is to break big problems down into smaller and independent
@@ -45,7 +48,11 @@
       <div class="medium-spacer"></div>
 
       <div class="value">
-        <h2 class="decorated">I listen</h2>
+        <div>
+          <h2 class="decorated">I listen</h2>
+          <div class="small-spacer"></div>
+          <div class="separator"></div>
+        </div>
         <div class="small-spacer"></div>
         <p>
           It‘s not always easy to articulate ideas or thoughts. But it‘s
@@ -56,7 +63,11 @@
 
       <div class="medium-spacer"></div>
       <div class="value">
-        <h2 class="decorated">I am involved</h2>
+        <div>
+          <h2 class="decorated">I am involved</h2>
+          <div class="small-spacer"></div>
+          <div class="separator"></div>
+        </div>
         <div class="small-spacer"></div>
         <p>
           Work is more than just doing the things I am supposed to do. Currently
@@ -69,12 +80,22 @@
   </section>
 
   <section class="dark-background">
-    <div class="section-content">
+    <div class="section-content narrow-section">
       <h1><span>Education and Skills</span></h1>
       <div class="large-spacer"></div>
       <p>
         Study of physics at the Technical University of Dresden from 1991 to
         1997, specialization in semiconductor physics and optics
+      </p>
+      <div class="small-spacer"></div>
+      <p>
+        My first computer was a KC85/1 from VEB Kombinat Robotron in Dresden.
+        From this time on I taught myself various programming languages like C,
+        C++, Turbo Pascal, Java and C#.
+      </p>
+      <div class="small-spacer"></div>
+      <p>
+        After I finished my physics degree .
       </p>
       <div class="medium-spacer"></div>
       <ul class="skills-chips">
@@ -106,7 +127,11 @@
     <div class="section-content">
       <h1><span>Work Samples</span></h1>
       <div class="large-spacer"></div>
-      <h2 class="decorated">Resource Planning &amp; Management</h2>
+      <div>
+        <h2 class="decorated">Resource Planning</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+      </div>
       <div class="small-spacer"></div>
       <div class="sample">
         <img src="sample1.png" class="shadowed-image"></img>
@@ -131,7 +156,11 @@
       </div>
 
       <div class="large-spacer"></div>
-      <h2 class="decorated">Manufacturing Execution System</h2>
+      <div>
+        <h2 class="decorated">Manufacturing Execution System</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+      </div>
       <div class="small-spacer"></div>
       <div class="sample">
         <img src="sample2.jpg" class="shadowed-image"></img>
@@ -155,7 +184,11 @@
       </div>
 
       <div class="large-spacer"></div>
-      <h2 class="decorated">Equipment Control</h2>
+      <div>
+        <h2 class="decorated">Equipment Control</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+      </div>
       <div class="small-spacer"></div>
       <div class="sample">
         <img src="sample3.png" class="shadowed-image"></img>
@@ -182,11 +215,13 @@
   </section>
 
   <section class="dark-background">
-    <div class="section-content">
+    <div class="section-content narrow-section">
       <h1><span>Side Projects</span></h1>
       <div class="large-spacer"></div>
-
       <h2 class="decorated">Test Coverage</h2>
+      <div class="small-spacer"></div>
+      <div class="separator"></div>
+
       <div class="small-spacer"></div>
       <a href="side-projects/test-coverage.html" class="side-project-link" name="side-projects-coverage-anchor">
         <div class="side-project">
@@ -202,12 +237,14 @@
       <div class="large-spacer"></div>
       <h2 class="decorated">Icon Set</h2>
       <div class="small-spacer"></div>
+      <div class="separator"></div>
+
+      <div class="small-spacer"></div>
       <a href="side-projects/icons.html" class="side-project-link" name="side-projects-icon-anchor">
         <div class="side-project">
           <p>
-            A custom icon set for a tool control software library. The previouse version of the software library used
-            bitmap images with a fixed size. But WPF provides the Path Markup Syntax to create scalable icons. I wanted
-            to learn and explore this new markup language. <span class="read-more">Read&nbsp;more...</span>
+            A custom icon set for a tool control software library. WPF provides the Path Markup Syntax to create
+            scalable icons. I wanted to learn and explore it. <span class="read-more">Read&nbsp;more...</span>
           </p>
           <div class="small-spacer"></div>
           <img src="side-projects/icons-preview.png" class="shadowed-image"></img>
