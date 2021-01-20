@@ -38,11 +38,11 @@
   }
 
   ol {
-      margin-left: var(--medium-space);
+      margin-left: var(--small-space);
   }
 
   ul {
-    margin-left: var(--tiny-space);
+    margin-left: var(--small-space);
     }
 
   li {
