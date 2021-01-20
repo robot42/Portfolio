@@ -42,11 +42,11 @@
   }
 
   ul {
-    margin-left: var(--medium-space);
+    margin-left: var(--tiny-space);
     }
 
   li {
-      padding-bottom: 8px;
+      padding-bottom: var(--tiny-space);
   }
 
   li:last-child {
