@@ -48,15 +48,3 @@ h1 > span {
 .read-more {
   text-decoration: underline;
 }
-
-@media only screen and (min-width: 800px) {
-  .value {
-    display: grid;
-    grid-template-columns: 200px auto auto;
-  }
-
-  .sample {
-    display: grid;
-    grid-template-columns: max-content var(--small-space) auto;
-  }
-}

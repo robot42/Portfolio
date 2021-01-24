@@ -17,16 +17,10 @@
   --light-text-color: rgba(255, 255, 255, 0.85);
   --border-color: rgba(0, 0, 0, 0.33);
   --image-border-color: #d2d2d2;
-  --tiny-space: 8px;
   --small-space: 24px;
-  --medium-space: 72px;
-  --large-space: 144px;
+  --medium-space: 48px;
+  --large-space: 96px;
   --first-breakpoint: 800px;
-}
-
-.tiny-spacer {
-  width: var(--tiny-space);
-  height: var(--tiny-space);
 }
 
 .small-spacer {
@@ -87,7 +81,7 @@ header {
 
 .header-content {
   color: var(--light-text-color);
-  padding: var(--large-space) var(--small-space);
+  padding: var(--large-space) 24px;
   max-width: var(--first-breakpoint);
   margin: auto;
 }
@@ -110,7 +104,7 @@ header .mission {
   width: 264px;
   text-align: center;
   text-decoration: none;
-  line-height: var(--medium-space);
+  line-height: 48px;
 }
 
 .light-background {
@@ -124,8 +118,8 @@ header .mission {
 .section-content {
   padding-top: var(--large-space);
   padding-bottom: var(--large-space);
-  padding-left: var(--small-space);
-  padding-right: var(--small-space);
+  padding-left: 24px;
+  padding-right: 24px;
   max-width: var(--first-breakpoint);
   margin: auto;
 }
@@ -147,4 +141,22 @@ footer {
   color: var(--light-text-color);
   padding: var(--large-space) var(--small-space);
   background-color: var(--background-color1);
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    --small-space: 24px;
+    --medium-space: 72px;
+    --large-space: 144px;
+  }
+
+  .value {
+    display: grid;
+    grid-template-columns: 200px auto auto;
+  }
+
+  .sample {
+    display: grid;
+    grid-template-columns: max-content var(--small-space) auto;
+  }
 }
