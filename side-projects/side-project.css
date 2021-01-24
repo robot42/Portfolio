@@ -38,15 +38,15 @@
   }
 
   ol {
-      margin-left: var(--medium-space);
+      margin-left: 32px;
   }
 
   ul {
-    margin-left: var(--medium-space);
+    margin-left: 32px;
     }
 
   li {
-      padding-bottom: 8px;
+      padding-bottom: 4px;
   }
 
   li:last-child {
