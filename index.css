@@ -1,7 +1,3 @@
-h1 > span {
-  width: 110%;
-  background-image: linear-gradient(transparent 60%, var(--accent-color2) 55%);
-}
 
 /* skills section */
 
@@ -31,11 +27,12 @@ h1 > span {
 
 /* side projects */
 
-.side-project {
+.side-project-card {
+  background-color: var(--background-color2);
+  border-radius: 8px;
+  padding: var(--medium-space);
   max-width: var(--first-breakpoint);
   margin: auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
 }
 
 .side-project-link {
@@ -43,8 +40,4 @@ h1 > span {
   color: var(--dark-text-color);
   text-decoration: none;
   outline: none;
-}
-
-.read-more {
-  text-decoration: underline;
 }
