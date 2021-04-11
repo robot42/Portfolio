@@ -42,3 +42,8 @@
   text-decoration: none;
   outline: none;
 }
+
+.side-project-image {
+  border-radius: 8px;
+  border: 1px solid var(--image-border-color);
+}

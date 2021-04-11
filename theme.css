@@ -139,11 +139,6 @@ header .mission {
   border: 1px solid var(--image-border-color);
 }
 
-.side-project-image {
-  border-radius: 8px;
-  border: 1px solid var(--image-border-color);
-}
-
 footer {
   display: flex;
   flex-flow: column;
@@ -154,9 +149,6 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
-  :root {
-    --large-space: 144px;
-  }
 
   .value {
     display: grid;
