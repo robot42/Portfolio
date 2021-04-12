@@ -8,14 +8,14 @@
 :root {
   --background-color1: #1f2438;
   --background-color2: #fff;
-  --background-color3: #ededed;
+  --background-color3: #edeff2;
   --shadow-color: #cccccc;
   --accent-color1: #d1ad73;
-  --accent-color2: #ead3a9;
-  --dark-headline-color: rgba(0, 0, 0, 0.85);
+  --accent-color2: #d1bd9d;
+  --dark-headline-color: #1f2438;
   --dark-text-color: #1f2438;
   --light-text-color: rgba(255, 255, 255, 0.85);
-  --border-color: rgba(0, 0, 0, 0.33);
+  --border-color: #d2d2d2;
   --image-border-color: #d2d2d2;
   --small-space: 24px;
   --medium-space: 48px;
@@ -62,12 +62,17 @@ h1 {
   color: var(--dark-headline-color);
 }
 
+h1 > span {
+  padding-left: 8px;
+  padding-right: 8px;
+  background-image: linear-gradient(transparent 0% 60%, var(--accent-color2) 60% 100%);
+}
+
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
-  white-space: nowrap;
 }
 
 header {
@@ -144,19 +149,19 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
-  :root {
-    --small-space: 24px;
-    --medium-space: 72px;
-    --large-space: 144px;
-  }
 
   .value {
     display: grid;
     grid-template-columns: 200px auto auto;
   }
 
-  .sample {
+  .work-sample-card {
     display: grid;
     grid-template-columns: max-content var(--small-space) auto;
+  }
+
+  .side-project-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }
