@@ -21,7 +21,7 @@
 }
 
 .personal-benefits::before {
-  content: "What I learned - ";
+  content: "What I have learned - ";
   font-weight: 700;
   color: var(--dark-headline-color);
 }
