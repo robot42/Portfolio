@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400|Playfaire+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Playfaire+Display:700&display=swap');
 
 * {
   margin: 0px;
@@ -9,9 +9,8 @@
   --background-color1: #1f2438;
   --background-color2: #fff;
   --background-color3: #edeff2;
-  --shadow-color: #cccccc;
+  --shadow-color: #dee1eb;
   --accent-color1: #d1ad73;
-  --accent-color2: #d1bd9d;
   --dark-headline-color: #1f2438;
   --dark-text-color: #1f2438;
   --light-text-color: rgba(255, 255, 255, 0.85);
@@ -41,7 +40,7 @@
 .separator {
   width: 72px;
   height: 4px;
-  background-color: var(--accent-color2);
+  background-color: var(--accent-color1);
 }
 
 body {
@@ -65,7 +64,7 @@ h1 {
 h1 > span {
   padding-left: 8px;
   padding-right: 8px;
-  background-image: linear-gradient(transparent 0% 60%, var(--accent-color2) 60% 100%);
+  background-image: linear-gradient(transparent 0% 60%, var(--accent-color1) 60% 100%);
 }
 
 h2 {
@@ -133,10 +132,13 @@ header .mission {
   max-width: 600px;
 }
 
-.shadowed-image {
+.rounded-image {
   border-radius: 8px;
-  filter: drop-shadow(2px 2px 5px var(--shadow-color));
-  border: 1px solid var(--image-border-color);
+  border: 1px solid var(--image-border-color); 
+}
+
+.link {
+  color: var(--accent-color1);
 }
 
 footer {

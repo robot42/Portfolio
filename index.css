@@ -21,7 +21,7 @@
 }
 
 .personal-benefits::before {
-  content: "What I learned - ";
+  content: "What I have learned - ";
   font-weight: 700;
   color: var(--dark-headline-color);
 }
@@ -34,6 +34,7 @@
   padding: var(--medium-space);
   max-width: var(--first-breakpoint);
   margin: auto;
+  filter: drop-shadow(2px 2px 5px var(--shadow-color));
 }
 
 .side-project-link {
