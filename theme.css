@@ -9,7 +9,7 @@
   --background-color1: #1f2438;
   --background-color2: #fff;
   --background-color3: #edeff2;
-  --shadow-color: #cccccc;
+  --shadow-color: #dee1eb;
   --accent-color1: #d1ad73;
   --dark-headline-color: #1f2438;
   --dark-text-color: #1f2438;
@@ -132,10 +132,9 @@ header .mission {
   max-width: 600px;
 }
 
-.shadowed-image {
+.rounded-image {
   border-radius: 8px;
-  filter: drop-shadow(2px 2px 5px var(--shadow-color));
-  border: 1px solid var(--image-border-color);
+  border: 1px solid var(--image-border-color); 
 }
 
 .link {
