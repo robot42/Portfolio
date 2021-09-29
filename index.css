@@ -12,6 +12,11 @@
   margin-bottom: 16px;
 }
 
+.skills-chips2 {
+  white-space: nowrap;
+  list-style-type: none;
+}
+
 /* section samples */
 
 .company-benefits::before {
