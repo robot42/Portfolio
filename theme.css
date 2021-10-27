@@ -157,6 +157,11 @@ footer {
     grid-template-columns: 200px auto auto;
   }
 
+  .skills-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
   .work-sample-card {
     display: grid;
     grid-template-columns: max-content var(--small-space) auto;
