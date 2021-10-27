@@ -1,18 +1,7 @@
 
 /* skills section */
 
-.skills-chips li {
-  display: inline-block;
-  border: solid 1px var(--border-color);
-  background-color: var(--background-color2);
-  white-space: nowrap;
-  border-radius: 8px;
-  padding: 8px 14px;
-  margin-right: 8px;
-  margin-bottom: 16px;
-}
-
-.skills-chips2 {
+.skills-chips {
   white-space: nowrap;
   list-style-type: none;
 }
