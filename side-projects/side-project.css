@@ -1,9 +1,6 @@
 .side-project {
-    padding-top: var(--small-space);
-    padding-bottom: var(--small-space);
-    padding-left: var(--small-space);
-    padding-right: var(--small-space);
-    max-width: var(--first-breakpoint);
+  padding: var(--small-space);
+  max-width: var(--first-breakpoint);
     margin: auto;
   }
   
