@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../theme.css" />
+    <link rel="stylesheet" type="text/css" href="side-project.css" />
+    <title>Enrico H&uuml;ttig | Side Projects</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-content">
+        <p>Side Projects</p>
+        <div class="small-spacer"></div>
+        <h1>JavaScript browser game</h1>
+        <div class="medium-spacer"></div>
+        <a class="cta" href="../index.html#side-projects-baba-anchor"
+          >&lt; Go Back</a
+        >
+      </div>
+    </header>
+
+    <section class="light-background">
+      <div class="section-content">
+        <p>
+          I work as a Product Owner since January 2022. Daily programming is no
+          longer my focus. Instead, I spend my time with software architecture,
+          discussions with stakeholders and my team and organising a lot of
+          smaller tasks. And after one year I was wondering how much I already
+          forgot from my old programming skills :-)
+        </p>
+        <div class="small-spacer"></div>
+        <p>
+          Some time ago I found a nice game named
+          <a href="https://en.wikipedia.org/wiki/Baba_Is_You">Babs is You</a>:
+          simple, creative, retro, fascinating. A little side project seems be a
+          good idea to test my programming skills and recreate to the basics of
+          the game. To make it challenging, I choose JavaScript and
+          <a href="https://svelte.dev">Svelte</a> as programming languages. I
+          had only a basic understanding of JavaScript, because I could not tell
+          the difference between &quot;==&quot; and &quot;===&quot;. But I knew
+          nothing about Svelte at all except the name.
+        </p>
+
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Lets get started</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+        <div class="small-spacer"></div>
+        <p>The development tools that I chose are</p>
+        <div class="small-spacer"></div>
+
+        <ul>
+          <li>Github Desktop</li>
+          <li>Visual Studio Code</li>
+          <li>JetBrains Rider</li>
+          <li>Brave browser</li>
+          <li><a href="https://jestjs.io">Jest</a> as test environment</li>
+        </ul>
+
+        <div class="small-spacer"></div>
+        <p>
+          The Svelte homepage provides a lot of examples. I downloaded one of
+          them as a starting point. I also wanted to use TDD (test driven
+          development) and installed jest. I spent about 2 hours to understand
+          its philosophy and get comfortable with it. Jest is easy to integrate
+          in a development process. It can watch my sources and run the tests
+          automatically if changes were saved.
+        </p>
+      </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content side-project-image">
+        <img
+          src="baba-development.png"
+          alt="development environment ready to use"
+        />
+      </div>
+    </section>
+    
+    <section class="light-background">
+      <div class="section-content">
+        <div class="small-spacer"></div>
+        <p>
+          I had a basic idea of the implementation in mind and started with the
+          obvious: creating a game board and Baba, put him on the board, move
+          him around and make nur that he does not fall off the edges.
+          Everything in small iterations, tests first and then the
+          implementation until all tests run successfully.
+        </p>
+        <div class="small-spacer"></div>
+        <p>
+          In the beginning, two major rewrites of the implementation were
+          necessary. One because of my lack of knowledge about JavaScript and
+          one because my initial code design did not work out
+          well. But I never had to change a large number of my tests.
+        </p>
+        <div class="small-spacer"></div>
+        <p>
+          The UI and Svelte came last. With a lot of help from the internet, I
+          finally figured it out and created an interactive web app similar to
+          the original game. The game allows baba to move, get blocked by walls,
+          push boxes around for fun and modify the environment.
+        </p>
+      </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content side-project-image">
+        <img
+          src="baba-result.png"
+          class="rounded-image"
+          alt="development environment ready to use"
+        />
+      </div>
+    </section>
+    
+    <section class="light-background">
+      <div class="section-content">
+        <h2 class="decorated">What I learned in about 40 hours</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+        <div class="small-spacer"></div>
+
+        <ul>
+          <li>Better understanding of JavaScript</li>
+          <li>Basics of Svelte</li>
+          <li>Development environment for web applications</li>
+          <li>
+            To used TDD, you need to understand and solve your the problem
+            first, then it can be implemented
+          </li>
+          <li>TDD reveals missing requirements early</li>
+          <li>TDD creates good APIs</li>
+          <li>
+            TDD leads to good test coverage but other testing is of course still
+            necessary
+          </li>
+          <li>
+            Have the logic implemented before you create the UI. The UI
+            distracts me from writing tests
+          </li>
+        </ul>
+
+        <div class="medium-spacer"></div>
+        <h2 class="decorated">Final Thoughts</h2>
+        <div class="small-spacer"></div>
+        <div class="separator"></div>
+        <div class="small-spacer"></div>
+        <p>
+          Now I know better what I can expect from my team when it comes to web
+          app development.
+        </p>
+      </div>
+    </section>
+
+    <section class="dark-background">
+      <div class="section-content side-project-image">
+        <img
+          src="baba-coverage.png"
+          alt="test coverage"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <a class="cta" href="../index.html#side-projects-coverage-anchor"
+        >&lt; Go Back</a
+      >
+    </footer>
+  </body>
+</html>
