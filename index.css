@@ -1,44 +1,43 @@
-
 /* skills section */
 
 .skills-chips {
-  white-space: nowrap;
-  list-style-type: none;
+    white-space: nowrap;
+    list-style-type: none;
 }
 
 /* section samples */
 
 .company-benefits::before {
-  content: "Company benefits - ";
-  font-weight: 700;
-  color: var(--dark-headline-color);
+    content: "Company benefits - ";
+    font-weight: 700;
+    color: var(--dark-headline-color);
 }
 
 .personal-benefits::before {
-  content: "What I have learned - ";
-  font-weight: 700;
-  color: var(--dark-headline-color);
+    content: "What I have learned - ";
+    font-weight: 700;
+    color: var(--dark-headline-color);
 }
 
 /* side projects */
 
 .side-project-card {
-  background-color: var(--background-color2);
-  border-radius: 8px;
-  padding: var(--medium-space);
-  max-width: var(--first-breakpoint);
-  margin: auto;
-  filter: drop-shadow(2px 2px 5px var(--shadow-color));
+    background-color: var(--background-color2);
+    border-radius: 8px;
+    padding: var(--medium-space);
+    max-width: var(--first-breakpoint);
+    margin: auto;
+    filter: drop-shadow(2px 2px 5px var(--shadow-color));
 }
 
 .side-project-link {
-  display: block;
-  color: var(--dark-text-color);
-  text-decoration: none;
-  outline: none;
+    display: block;
+    color: var(--dark-text-color);
+    text-decoration: none;
+    outline: none;
 }
 
 .side-project-image {
-  border-radius: 8px;
-  border: 1px solid var(--image-border-color);
+    border-radius: 8px;
+    border: 1px solid var(--image-border-color);
 }

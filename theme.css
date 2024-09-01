@@ -1,171 +1,171 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Playfaire+Display:700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --background-color1: #1f2438;
-  --background-color2: #fff;
-  --background-color3: #edeff2;
-  --shadow-color: #dee1eb;
-  --accent-color1: #d1ad73;
-  --dark-headline-color: #1f2438;
-  --dark-text-color: #1f2438;
-  --light-text-color: rgba(255, 255, 255, 0.85);
-  --border-color: #d2d2d2;
-  --image-border-color: #d2d2d2;
-  --small-space: 24px;
-  --medium-space: 48px;
-  --large-space: 96px;
-  --first-breakpoint: 800px;
+    --background-color1: #1f2438;
+    --background-color2: #fff;
+    --background-color3: #edeff2;
+    --shadow-color: #dee1eb;
+    --accent-color1: #d1ad73;
+    --dark-headline-color: #1f2438;
+    --dark-text-color: #1f2438;
+    --light-text-color: rgba(255, 255, 255, 0.85);
+    --border-color: #d2d2d2;
+    --image-border-color: #d2d2d2;
+    --small-space: 24px;
+    --medium-space: 48px;
+    --large-space: 96px;
+    --first-breakpoint: 800px;
 }
 
 .small-spacer {
-  width: var(--small-space);
-  height: var(--small-space);
+    width: var(--small-space);
+    height: var(--small-space);
 }
 
 .medium-spacer {
-  width: var(--medium-space);
-  height: var(--medium-space);
+    width: var(--medium-space);
+    height: var(--medium-space);
 }
 
 .large-spacer {
-  width: var(--large-space);
-  height: var(--large-space);
+    width: var(--large-space);
+    height: var(--large-space);
 }
 
 .separator {
-  width: 72px;
-  height: 4px;
-  background-color: var(--accent-color1);
+    width: 72px;
+    height: 4px;
+    background-color: var(--accent-color1);
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  background-color: white;
-  color: var(--dark-text-color);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: white;
+    color: var(--dark-text-color);
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 49px;
-  line-height: 65px;
-  text-align: center;
-  font-weight: 700;
-  color: var(--dark-headline-color);
+    font-family: "Playfair Display", serif;
+    font-size: 49px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--dark-headline-color);
 }
 
 h1 > span {
-  padding-left: 8px;
-  padding-right: 8px;
-  background-image: linear-gradient(transparent 0% 60%, var(--accent-color1) 60% 100%);
+    padding-left: 8px;
+    padding-right: 8px;
+    background-image: linear-gradient(transparent 0% 60%, var(--accent-color1) 60% 100%);
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 25px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
 }
 
 header {
-  background-image: url("keyboard2.png");
-  background-color: var(--background-color1);
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
+    background-image: url("keyboard2.png");
+    background-color: var(--background-color1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .header-content {
-  color: var(--light-text-color);
-  padding: var(--large-space) 24px;
-  max-width: var(--first-breakpoint);
-  margin: auto;
+    color: var(--light-text-color);
+    padding: var(--large-space) 24px;
+    max-width: var(--first-breakpoint);
+    margin: auto;
 }
 
 header h1 {
-  color: var(--accent-color1);
-  max-width: 550px;
-  text-align: left;
-  line-height: 54px;
+    color: var(--accent-color1);
+    max-width: 550px;
+    text-align: left;
+    line-height: 54px;
 }
 
 header .mission {
-  max-width: 550px;
+    max-width: 550px;
 }
 
 .cta {
-  display: block;
-  background-color: var(--accent-color1);
-  color: var(--dark-text-color);
-  width: 264px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 48px;
+    display: block;
+    background-color: var(--accent-color1);
+    color: var(--dark-text-color);
+    width: 264px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 48px;
 }
 
 .light-background {
-  background-color: var(--background-color2);
+    background-color: var(--background-color2);
 }
 
 .dark-background {
-  background-color: var(--background-color3);
+    background-color: var(--background-color3);
 }
 
 .section-content {
-  padding: var(--large-space) 24px;
-  max-width: var(--first-breakpoint);
-  margin: auto;
+    padding: var(--large-space) 24px;
+    max-width: var(--first-breakpoint);
+    margin: auto;
 }
 
 .narrow-section {
-  max-width: 600px;
+    max-width: 600px;
 }
 
 .rounded-image {
-  border-radius: 8px;
-  border: 1px solid var(--image-border-color); 
+    border-radius: 8px;
+    border: 1px solid var(--image-border-color);
 }
 
 .link {
-  color: var(--accent-color1);
+    color: var(--accent-color1);
 }
 
 footer {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  color: var(--light-text-color);
-  padding: var(--large-space) var(--small-space);
-  background-color: var(--background-color1);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: var(--light-text-color);
+    padding: var(--large-space) var(--small-space);
+    background-color: var(--background-color1);
 }
 
 @media only screen and (min-width: 800px) {
 
-  .value {
-    display: grid;
-    grid-template-columns: 200px auto auto;
-  }
+    .value {
+        display: grid;
+        grid-template-columns: 200px auto auto;
+    }
 
-  .skills-row {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
+    .skills-row {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 
-  .work-sample-card {
-    display: grid;
-    grid-template-columns: max-content var(--small-space) auto;
-  }
+    .work-sample-card {
+        display: grid;
+        grid-template-columns: max-content var(--small-space) auto;
+    }
 
-  .side-project-card {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
+    .side-project-card {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
 }
