@@ -10,7 +10,7 @@
     --background-color2: #fff;
     --background-color3: #edeff2;
     --shadow-color: #dee1eb;
-    --accent-color1: #d1ad73;
+    --accent-color1: #e0b256;
     --dark-headline-color: #1f2438;
     --dark-text-color: #1f2438;
     --light-text-color: rgba(255, 255, 255, 0.85);
@@ -106,6 +106,7 @@ header .mission {
     background-color: var(--accent-color1);
     color: var(--dark-text-color);
     width: 264px;
+    border-radius: 8px;
     text-align: center;
     text-decoration: none;
     line-height: 48px;

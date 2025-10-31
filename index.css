@@ -28,6 +28,8 @@
     max-width: var(--first-breakpoint);
     margin: auto;
     filter: drop-shadow(2px 2px 5px var(--shadow-color));
+    /* ensure zoomed image is clipped to the card shape */
+    overflow: hidden;
 }
 
 .side-project-link {
@@ -40,4 +42,33 @@
 .side-project-image {
     border-radius: 8px;
     border: 1px solid var(--image-border-color);
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* smooth GPU-accelerated animation when scaled */
+    transition: transform 280ms cubic-bezier(.2,.8,.2,1), filter 280ms ease;
+    will-change: transform;
+}
+
+/* Hover / focus zoom: scale the image slightly while keeping the card clipped */
+.side-project-link:hover .side-project-image,
+.side-project-link:focus .side-project-image,
+.side-project-link:focus-visible .side-project-image {
+    transform: scale(1.08);
+}
+
+/* Slight visual lift on hover to enhance affordance */
+.side-project-link:hover .side-project-card,
+.side-project-link:focus .side-project-card,
+.side-project-link:focus-visible .side-project-card {
+    filter: drop-shadow(4px 6px 12px rgba(0,0,0,0.12));
+}
+
+/* Responsive tweaks: a bit more compact padding on small screens */
+@media (max-width: 640px) {
+    .side-project-card {
+        padding: var(--small-space);
+        max-width: 100%;
+    }
 }

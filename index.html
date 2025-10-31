@@ -24,8 +24,8 @@
             beautiful way.
         </p>
         <div class="medium-spacer"></div>
-        <a class="cta"
-           href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;">&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;</a>
+    <button class="cta reveal-email-btn" type="button" aria-expanded="false" aria-controls="email-target-header">Contact me</button>
+    <span id="email-target-header" class="email-target" aria-live="polite"></span>
     </div>
 </header>
 
@@ -344,9 +344,55 @@
         Let's make great things together.
     </p>
     <div class="medium-spacer"></div>
-    <a class="cta"
-       href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#101;&#104;&#117;&#101;&#116;&#116;&#105;&#103;&#052;&#050;&#046;&#100;&#101;">SEND
-        ME AN EMAIL</a>
+    <button class="cta reveal-email-btn" type="button" aria-expanded="false" aria-controls="email-target-footer">Send me an email</button>
+    <span id="email-target-footer" class="email-target" aria-live="polite"></span>
+
+    <!-- email reveal script: email is stored reversed in JS and only reconstructed on user interaction -->
+    <script>
+        (function () {
+            // reversed email string to keep it out of static DOM
+            const reversed = 'ed.24gitteuhe@tcatnoc'; // reversed 'contact@ehuettig42.de'
+
+            function unreversed(str) {
+                return str.split('').reverse().join('');
+            }
+
+            function reveal(btn) {
+                const email = unreversed(reversed);
+                if (!email) return;
+                const a = document.createElement('a');
+                a.href = 'mailto:' + email;
+                a.textContent = email;
+                a.className = 'cta';
+                a.setAttribute('role', 'link');
+
+                const targetId = btn.getAttribute('aria-controls');
+                const target = targetId ? document.getElementById(targetId) : null;
+
+                // replace the button with the mailto link
+                btn.replaceWith(a);
+                if (target) target.textContent = ' Email revealed.';
+                a.focus();
+
+                // try copying to clipboard for convenience (optional)
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(email).catch(() => {});
+                }
+            }
+
+            document.querySelectorAll('.reveal-email-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    reveal(btn);
+                });
+                btn.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        reveal(btn);
+                    }
+                });
+            });
+        })();
+    </script>
 </footer>
 </body>
 
