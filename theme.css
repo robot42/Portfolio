@@ -101,6 +101,13 @@ header .mission {
     max-width: 550px;
 }
 
+button {
+    /* inherit typography from body to keep a single source of truth */
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
 .cta {
     display: block;
     background-color: var(--accent-color1);

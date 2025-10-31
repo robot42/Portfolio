@@ -24,8 +24,7 @@
             beautiful way.
         </p>
         <div class="medium-spacer"></div>
-    <button class="cta reveal-email-btn" type="button" aria-expanded="false" aria-controls="email-target-header">Contact me</button>
-    <span id="email-target-header" class="email-target" aria-live="polite"></span>
+        <button class="cta reveal-email-btn" type="button" aria-expanded="false">Contact me</button>
     </div>
 </header>
 
@@ -344,8 +343,7 @@
         Let's make great things together.
     </p>
     <div class="medium-spacer"></div>
-    <button class="cta reveal-email-btn" type="button" aria-expanded="false" aria-controls="email-target-footer">Send me an email</button>
-    <span id="email-target-footer" class="email-target" aria-live="polite"></span>
+    <button class="cta reveal-email-btn" type="button" aria-expanded="false">Contact me</button>
 
     <!-- email reveal script: email is stored reversed in JS and only reconstructed on user interaction -->
     <script>
@@ -366,12 +364,8 @@
                 a.className = 'cta';
                 a.setAttribute('role', 'link');
 
-                const targetId = btn.getAttribute('aria-controls');
-                const target = targetId ? document.getElementById(targetId) : null;
-
                 // replace the button with the mailto link
                 btn.replaceWith(a);
-                if (target) target.textContent = ' Email revealed.';
                 a.focus();
 
                 // try copying to clipboard for convenience (optional)
