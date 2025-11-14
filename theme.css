@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Playfaire+Display:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Mono:400,700&display=swap');
 
 * {
     margin: 0;
@@ -46,48 +46,49 @@
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
-    background-color: white;
+    /*background-color: lightgrey;*/
+    /*background-image: url("pict0072.jpg");*/
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
     color: var(--dark-text-color);
 }
 
 h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto Mono", monospace;
     font-size: 49px;
     line-height: 65px;
     text-align: center;
     font-weight: 700;
-    color: var(--dark-headline-color);
-}
-
-h1 > span {
-    padding-left: 8px;
-    padding-right: 8px;
-    background-image: linear-gradient(transparent 0% 60%, var(--accent-color1) 60% 100%);
+    color: var(--accent-color1);
 }
 
 h2 {
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: 25px;
     line-height: 25px;
 }
 
-header {
-    background-image: url("keyboard2.png");
-    background-color: var(--background-color1);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-}
+/*header {*/
+/*    background-image: url("keyboard2.png");*/
+/*    background-color: var(--background-color1);*/
+/*    background-blend-mode: multiply;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: right;*/
+/*}*/
 
 .header-content {
-    color: var(--light-text-color);
-    padding: var(--large-space) 24px;
-    max-width: var(--first-breakpoint);
-    margin: auto;
+    /*color: var(--light-text-color);*/
+    /*padding: var(--large-space) 24px;*/
+    /*max-width: var(--first-breakpoint);*/
+    margin: 64px;
 }
 
 header h1 {
@@ -120,11 +121,11 @@ button {
 }
 
 .light-background {
-    background-color: var(--background-color2);
+    /*background-color: var(--background-color2);*/
 }
 
 .dark-background {
-    background-color: var(--background-color3);
+    /*background-color: var(--background-color3);*/
 }
 
 .section-content {
@@ -157,10 +158,10 @@ footer {
 
 @media only screen and (min-width: 800px) {
 
-    .value {
+    /* .value {
         display: grid;
         grid-template-columns: 200px auto auto;
-    }
+    } */
 
     .skills-row {
         display: grid;

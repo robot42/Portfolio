@@ -1,5 +1,39 @@
 /* skills section */
 
+.glass-card {
+    background: rgba(10, 15, 42, .55);
+    color: lightgrey;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 112, 155, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15);
+    padding: 2rem;
+}
+
+.glass-card-light {
+    background: rgba(240, 248, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(173, 216, 230, 0.4);
+    color: white;
+    padding: 2rem;
+}
+
+.neumorphic-card {
+    background: lightgrey;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow:
+            inset -8px -8px 16px rgba(255, 255, 255, 0.3),
+            inset 8px 8px 16px rgba(60, 60, 90, 0.2);
+    
+    color: darkblue;
+    transition: all 0.3s ease;
+}
+
+
 .skills-chips {
     white-space: nowrap;
     list-style-type: none;
