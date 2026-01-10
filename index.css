@@ -35,8 +35,11 @@
 
 
 .skills-chips {
-    white-space: nowrap;
     list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
 }
 
 /* section samples */
