@@ -9,6 +9,9 @@
     border: 1px solid var(--glass-border-color);
     box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15);
     padding: 2rem;
+    max-width: var(--first-breakpoint);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .glass-card-light {
@@ -19,6 +22,9 @@
     border: 1px solid rgba(173, 216, 230, 0.4);
     color: white;
     padding: 2rem;
+    max-width: var(--first-breakpoint);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .neumorphic-card {
