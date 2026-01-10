@@ -6,7 +6,7 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 16px;
-    border: 1px solid rgba(134, 200, 230, 0.45);
+    border: 1px solid var(--glass-border-color);
     box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15);
     padding: 2rem;
 }
@@ -81,36 +81,22 @@
     border-radius: 12px;
 }
 
-/* section samples */
-
-.company-benefits::before {
-    content: "Company benefits - ";
-    font-weight: 700;
-    color: var(--dark-headline-color);
-}
-
-.personal-benefits::before {
-    content: "What I have learned - ";
-    font-weight: 700;
-    color: var(--dark-headline-color);
-}
-
 /* side projects */
 
 .side-project-card {
-    background-color: var(--background-color2);
+    background-color: transparent;
     border-radius: 8px;
+    border: 1px solid var(--accent-color1);
     padding: var(--medium-space);
     max-width: var(--first-breakpoint);
     margin: auto;
-    filter: drop-shadow(2px 2px 5px var(--shadow-color));
     /* ensure zoomed image is clipped to the card shape */
     overflow: hidden;
 }
 
 .side-project-link {
     display: block;
-    color: var(--dark-text-color);
+    color: inherit;
     text-decoration: none;
     outline: none;
 }
@@ -137,7 +123,7 @@
 .side-project-link:hover .side-project-card,
 .side-project-link:focus .side-project-card,
 .side-project-link:focus-visible .side-project-card {
-    filter: drop-shadow(4px 6px 12px rgba(0,0,0,0.12));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Responsive tweaks: a bit more compact padding on small screens */
