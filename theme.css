@@ -54,6 +54,7 @@ body {
     background-size: cover;
     height: 100vh;
     margin: 0;
+    padding: 48px;
     color: var(--dark-text-color);
 }
 
@@ -163,9 +164,18 @@ footer {
     background-color: var(--background-color1);
 }
 
+section {
+    margin-bottom: 48px;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
 @media only screen and (max-width: 800px) {
     body {
         background-attachment: scroll;
+        padding: 32px 24px;
     }
 
     h1 {
