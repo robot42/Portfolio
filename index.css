@@ -42,6 +42,45 @@
     gap: 8px 12px;
 }
 
+/* values section */
+
+.values-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.values-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.values-illustration {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.skills-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+    align-items: start;
+}
+
+.skills-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-illustration {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    border-radius: 12px;
+}
+
 /* section samples */
 
 .company-benefits::before {
@@ -106,5 +145,17 @@
     .side-project-card {
         padding: var(--small-space);
         max-width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .values-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .skills-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
