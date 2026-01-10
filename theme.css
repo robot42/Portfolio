@@ -53,7 +53,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 48px;
     color: var(--dark-text-color);
@@ -156,15 +156,6 @@ button {
     color: var(--accent-color1);
 }
 
-footer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    color: var(--light-text-color);
-    padding: var(--large-space) var(--small-space);
-    background-color: var(--background-color1);
-}
-
 section {
     margin-bottom: 48px;
 }
@@ -172,6 +163,7 @@ section {
 section:last-of-type {
     margin-bottom: 0;
 }
+
 
 @media only screen and (max-width: 800px) {
     body {

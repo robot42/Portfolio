@@ -81,6 +81,31 @@
     border-radius: 12px;
 }
 
+.footer-layout {
+    display: inline-grid;
+    grid-template-columns: max-content 320px;
+    gap: 32px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer-card {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-illustration {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    border-radius: 12px;
+}
+
 /* side projects */
 
 .side-project-card {
@@ -143,5 +168,12 @@
     .skills-layout {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .footer-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 100%;
     }
 }
