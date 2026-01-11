@@ -19,6 +19,7 @@
     --border-color: #d2d2d2;
     --image-border-color: #d2d2d2;
     --glass-border-color: rgba(134, 200, 230, 0.45);
+    --glass-border-icy: rgba(183, 236, 255, 0.95);
     --skills-separator: "•";
     --skills-separator-gap: 12px;
     --small-space: 24px;
@@ -180,6 +181,30 @@ header .mission {
     max-width: var(--first-breakpoint);
     width: 100%;
     margin: 0 auto;
+}
+
+.glass-card--hero {
+    position: relative;
+    border-color: transparent;
+}
+
+.glass-card--hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 16px;
+    background: conic-gradient(
+        from var(--glass-border-angle),
+        var(--glass-border-color),
+        var(--glass-border-icy),
+        var(--glass-border-color)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: glass-border-sweep 6s linear infinite;
+    pointer-events: none;
 }
 
 .glass-card-light {
@@ -412,5 +437,17 @@ header .mission {
     .side-project-card {
         display: grid;
         grid-template-columns: auto auto auto;
+    }
+}
+
+@property --glass-border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes glass-border-sweep {
+    to {
+        --glass-border-angle: 360deg;
     }
 }
