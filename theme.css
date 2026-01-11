@@ -19,6 +19,8 @@
     --border-color: #d2d2d2;
     --image-border-color: #d2d2d2;
     --glass-border-color: rgba(134, 200, 230, 0.45);
+    --skills-separator: "•";
+    --skills-separator-gap: 12px;
     --small-space: 24px;
     --medium-space: 48px;
     --large-space: 96px;
@@ -205,13 +207,29 @@ header .mission {
 }
 
 /* Skills */
-.skills-chips {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 12px;
+.skills-card {
+    padding-bottom: 48px;
 }
+
+.skills-items {
+    display: block;
+}
+
+.skills-items span {
+    display: inline;
+}
+
+.skills-items span::after {
+    content: var(--skills-separator);
+    color: var(--accent-color1);
+    margin: 0 var(--skills-separator-gap);
+}
+
+.skills-items span:last-child::after {
+    content: "";
+    margin: 0;
+}
+
 
 .skills-layout {
     display: grid;
