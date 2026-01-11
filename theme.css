@@ -174,7 +174,7 @@ header .mission {
     border-radius: 16px;
     border: 1px solid var(--glass-border-color);
     box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15);
-    padding: 2rem;
+    padding: var(--medium-space);
     max-width: var(--first-breakpoint);
     width: 100%;
     margin: 0 auto;
@@ -279,14 +279,14 @@ header .mission {
 
 /* Side projects */
 .side-project-card {
-    background-color: transparent;
+    /* background-color: transparent;
     border-radius: 8px;
     border: 1px solid var(--accent-color1);
-    padding: var(--medium-space);
+    padding: var(--medium-space); */
     max-width: var(--first-breakpoint);
     margin: auto;
     /* ensure zoomed image is clipped to the card shape */
-    overflow: hidden;
+    overflow: visible;
 }
 
 .side-project-link {
