@@ -401,6 +401,7 @@ header .mission {
     .skills-row {
         display: grid;
         grid-template-columns: 50% 50%;
+        gap: var(--small-space);
     }
 
     .work-sample-card {
