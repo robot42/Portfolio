@@ -197,13 +197,12 @@ header .mission {
     background: conic-gradient(
         from var(--glass-border-angle),
         var(--glass-border-color),
-        var(--glass-border-icy),
-        var(--glass-border-color)
+        var(--glass-border-icy)
     );
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: glass-border-sweep 6s linear infinite;
+    animation: glass-border-sweep 45s linear infinite;
     pointer-events: none;
 }
 
