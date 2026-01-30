@@ -1,45 +1,12 @@
-.side-project {
-    padding: var(--small-space);
-    max-width: var(--first-breakpoint);
-    margin: auto;
-}
-
-.side-project > p {
-    padding-bottom: var(--small-space);
-}
-
-.side-project > p:last-child {
-    padding-bottom: 0;
-}
-
-.side-project-image {
-    text-align: center;
-}
-
-.side-project-image > img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
 #side_project_icons_img {
-    display: block;
-    margin: 0 auto;
-    width: calc(100% - (2 * var(--medium-space)));
     max-width: 585px;
 }
 
 #side_project_icons_new_img {
-    display: block;
-    margin: 0 auto;
-    width: calc(100% - (2 * var(--medium-space)));
     max-width: 736px;
 }
 
 #test_coverage_img {
-    display: block;
-    margin: 0 auto;
-    width: calc(100% - (2 * var(--medium-space)));
     max-width: 704px;
 }
 
