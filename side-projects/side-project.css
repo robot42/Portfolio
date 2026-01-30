@@ -23,15 +23,31 @@
 }
 
 #side_project_icons_img {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - (2 * var(--medium-space)));
     max-width: 585px;
 }
 
 #side_project_icons_new_img {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - (2 * var(--medium-space)));
     max-width: 736px;
 }
 
 #test_coverage_img {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - (2 * var(--medium-space)));
     max-width: 704px;
+}
+
+.side-project-media {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - (2 * var(--medium-space)));
+    max-width: 100%;
 }
 
 ol {

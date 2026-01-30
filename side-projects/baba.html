@@ -4,26 +4,24 @@
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
     <link href="../theme.css" rel="stylesheet" type="text/css"/>
     <link href="side-project.css" rel="stylesheet" type="text/css"/>
     <title>Enrico H&uuml;ttig | Side Projects</title>
 </head>
 
 <body>
-<header>
-    <div class="header-content">
+<section>
+    <div class="glass-card">
         <p>Side Projects</p>
         <div class="small-spacer"></div>
         <h1>JavaScript Browser Game</h1>
-        <div class="medium-spacer"></div>
-        <a class="cta" href="../index.html#side-projects-baba-anchor"
-        >&lt; Go Back</a
-        >
-    </div>
-</header>
-
-<section class="light-background">
-    <div class="section-content">
+        <div class="small-spacer"></div>
         <p>
             I work as a Product Owner since January 2022. Daily programming is no
             longer my focus. Instead, I spend my time with software architecture,
@@ -34,21 +32,24 @@
         <div class="small-spacer"></div>
         <p>
             Some time ago I found a nice game named
-            <a href="https://en.wikipedia.org/wiki/Baba_Is_You">Babs is You</a>:
+            <a class="link" href="https://en.wikipedia.org/wiki/Baba_Is_You">Babs is You</a>:
             simple, creative, retro, fascinating. A little side project seems be a
             good idea to test my programming skills and recreate the basics of the
             game. To make it challenging, I choose JavaScript and
-            <a href="https://svelte.dev">Svelte</a> as programming languages. I
+            <a class="link" href="https://svelte.dev">Svelte</a> as programming languages. I
             had only a basic understanding of JavaScript (I could not tell the
             difference between &quot;==&quot; and &quot;===&quot;). And I knew
             nothing about Svelte at all except the name.
         </p>
+        <div class="small-spacer"></div>
+        <a class="cta" href="../index.html#side-projects-baba-anchor">&lt; Go Back</a>
+    </div>
+</section>
 
-        <div class="medium-spacer"></div>
+<section>
+    <div class="glass-card">
         <h2 class="decorated">Let&apos;s get started</h2>
-        <div class="small-spacer"></div>
-        <div class="separator"></div>
-        <div class="small-spacer"></div>
+        <div class="medium-spacer"></div>
         <p>The development tools that I chose are:</p>
         <div class="small-spacer"></div>
 
@@ -57,7 +58,7 @@
             <li>Visual Studio Code</li>
             <li>JetBrains Rider</li>
             <li>Brave browser</li>
-            <li><a href="https://jestjs.io">Jest</a> as test environment</li>
+            <li><a class="link" href="https://jestjs.io">Jest</a> as test environment</li>
         </ul>
 
         <div class="small-spacer"></div>
@@ -69,22 +70,19 @@
             in a development process. It can watch my sources and run the tests
             automatically if changes were saved.
         </p>
-    </div>
-</section>
-
-<section class="dark-background">
-    <div class="section-content side-project-image">
+        <div class="medium-spacer"></div>
         <img
                 alt="development environment ready to use"
-                class="rounded-image"
+                class="rounded-image side-project-media"
                 src="baba-development.png"
         />
     </div>
 </section>
 
-<section class="light-background">
-    <div class="section-content">
-        <div class="small-spacer"></div>
+<section>
+    <div class="glass-card">
+        <h2 class="decorated">The Process</h2>
+        <div class="medium-spacer"></div>
         <p>
             I had a basic idea of the implementation in mind and started with the
             obvious: creating a game board and Baba, put him on the board, move
@@ -106,28 +104,22 @@
             finally figured it out and created an interactive web app similar to
             the original game. My version allows Baba to move, get blocked by
             walls, push boxes around for fun and modify the environment.
-            <a href="baba/index.html">Try it out</a> and use the browswer&apos;s
+            <a class="link" href="baba/index.html">Try it out</a> and use the browswer&apos;s
             back button to come back here.
         </p>
-    </div>
-</section>
-
-<section class="dark-background">
-    <div class="section-content side-project-image">
+        <div class="medium-spacer"></div>
         <img
                 alt="development environment ready to use"
-                class="rounded-image"
+                class="rounded-image side-project-media"
                 src="baba-result.png"
         />
     </div>
 </section>
 
-<section class="light-background">
-    <div class="section-content">
-        <h2 class="decorated">What I learned in about 40 hours</h2>
-        <div class="small-spacer"></div>
-        <div class="separator"></div>
-        <div class="small-spacer"></div>
+<section>
+    <div class="glass-card">
+        <h2 class="decorated">The Result</h2>
+        <div class="medium-spacer"></div>
 
         <ul>
             <li>Better understanding of JavaScript</li>
@@ -150,31 +142,20 @@
         </ul>
 
         <div class="medium-spacer"></div>
-        <h2 class="decorated">Final Thoughts</h2>
-        <div class="small-spacer"></div>
-        <div class="separator"></div>
-        <div class="small-spacer"></div>
-        <p>
-            Now I know better what I can expect from my team when it comes to web
-            app development.
-        </p>
-    </div>
-</section>
-
-<section class="dark-background">
-    <div class="section-content side-project-image">
+        
         <img
                 alt="test coverage"
-                class="rounded-image"
+                class="rounded-image side-project-media"
                 src="baba-coverage.png"
         />
+        <div class="medium-spacer"></div>
+        <p>
+            It took me about 40 hours to get to the resukt. Now I know better what I can expect from my team when it comes to web
+            app development.
+        </p>
+        <div class="medium-spacer"></div>
+        <a class="cta" href="../index.html#side-projects-baba-anchor">&lt; Go Back</a>
     </div>
 </section>
-
-<footer>
-    <a class="cta" href="../index.html#side-projects-baba-anchor"
-    >&lt; Go Back</a
-    >
-</footer>
 </body>
 </html>
