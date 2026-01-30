@@ -12,13 +12,22 @@
     --background-color2: #fff;
     --background-color3: #edeff2;
     --shadow-color: #dee1eb;
-    --accent-color1: #e0b256;
+    --accent-color1: #c8922a;
     --dark-headline-color: #1f2438;
     --dark-text-color: #1f2438;
     --light-text-color: rgba(255, 255, 255, 0.85);
+    /* Background image palette (auto-extracted) */
+    --bg-image-1: #1f2024;
+    --bg-image-2: #232427;
+    --bg-image-2-rgb: 35, 36, 39;
+    --bg-image-3: #303032;
+    --bg-image-4: #464443;
+    --bg-image-5: #6b655e;
+    --bg-image-7: #c8922a;
+    --bg-image-8: #2a6ec8;
     --border-color: #d2d2d2;
     --image-border-color: #d2d2d2;
-    --glass-border-color: rgba(134, 200, 230, 0.45);
+    --glass-border-color: var(--bg-image-5);
     --glass-border-icy: rgba(183, 236, 255, 0.95);
     --skills-separator: "•";
     --skills-separator-gap: 12px;
@@ -36,8 +45,9 @@ body {
     line-height: 24px;
     /*background-color: lightgrey;*/
     /*background-image: url("pict0072.jpg");*/
-    background-image: url("background.png");
+    background-image: url("background.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
@@ -170,13 +180,13 @@ header .mission {
 
 /* Card styles */
 .glass-card {
-    background: rgba(10, 15, 42, 0.55);
+    background: rgba(var(--bg-image-2-rgb), 0.55);
     color: lightgrey;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 16px;
     border: 1px solid var(--glass-border-color);
-    box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15);
+    /* box-shadow: 0 8px 32px rgba(0, 112, 155, 0.15); */
     padding: var(--medium-space);
     max-width: var(--first-breakpoint);
     width: 100%;
@@ -207,7 +217,7 @@ header .mission {
 }
 
 .glass-card-light {
-    background: rgba(240, 248, 255, 0.25);
+    background: rgba(var(--bg-image-2-rgb), 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
