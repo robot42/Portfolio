@@ -280,7 +280,7 @@ section:last-of-type {
 /* Responsive tweaks */
 @media (max-width: 640px) {
     .side-project-card {
-        padding: var(--small-space);
+        padding: 0;
         max-width: 100%;
     }
 }
@@ -288,7 +288,19 @@ section:last-of-type {
 @media only screen and (max-width: 800px) {
     body {
         background-attachment: scroll;
+        background-image: none;
         padding: 32px var(--small-space);
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
     h1 {
@@ -306,6 +318,11 @@ section:last-of-type {
         line-height: 26px;
     }
 
+    .cta {
+        width: 100%;
+        max-width: 320px;
+    }
+
     .values-layout {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -314,6 +331,11 @@ section:last-of-type {
     .skills-layout {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .skills-row {
+        display: grid;
+        gap: var(--medium-space);
     }
 
     .footer-layout {
