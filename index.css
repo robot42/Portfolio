@@ -1,3 +1,35 @@
+#positioning,
+#proof-points,
+#background {
+    position: relative;
+}
+
+#positioning .section-content,
+#proof-points .section-content,
+#background .section-content {
+    padding-top: clamp(46px, 6vw, 74px);
+    padding-bottom: clamp(46px, 6vw, 74px);
+}
+
+#positioning .section-content::before,
+#proof-points .section-content::before,
+#background .section-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(79, 121, 168, 0.18), rgba(79, 121, 168, 0.03));
+    pointer-events: none;
+}
+
+#positioning h1,
+#proof-points h1,
+#background h1 {
+    margin-left: 28px;
+}
+
 #proof-points .work-sample-card,
 #work-samples .work-sample-card {
     padding: 28px;
@@ -9,7 +41,7 @@
 
 #positioning .value {
     display: block;
-    padding: 0;
+    padding: 0 0 0 28px;
     border: 0;
     border-radius: 0;
     background: transparent;
@@ -23,6 +55,16 @@
 #positioning .value p {
     max-width: none;
     font-size: 1.02rem;
+}
+
+#positioning .value + .medium-spacer {
+    display: none;
+}
+
+#positioning .value:not(:last-of-type) {
+    margin-bottom: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid rgba(79, 121, 168, 0.12);
 }
 
 #working-style > .section-content > p:first-of-type,
@@ -88,6 +130,26 @@
     overflow: hidden;
 }
 
+#proof-points .work-sample-card {
+    display: grid;
+    gap: 18px;
+    padding: 26px 0 26px 28px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#proof-points .work-sample-card + .large-spacer {
+    display: none;
+}
+
+#proof-points .work-sample-card:not(:last-of-type) {
+    margin-bottom: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid rgba(79, 121, 168, 0.12);
+}
+
 .work-sample-card::before {
     content: "";
     position: absolute;
@@ -100,6 +162,17 @@
     height: 100%;
     min-height: 220px;
     object-fit: cover;
+}
+
+#proof-points .work-sample-card::before {
+    width: 1px;
+    background: linear-gradient(180deg, rgba(79, 121, 168, 0.48), rgba(215, 154, 71, 0.38));
+}
+
+#proof-points .work-sample-card img {
+    max-width: 240px;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
 }
 
 .company-benefits::before {
@@ -144,6 +217,15 @@
     transform: rotate(45deg);
     opacity: 0.85;
     pointer-events: none;
+}
+
+#background p {
+    max-width: 60ch;
+    padding-left: 28px;
+}
+
+#background .small-spacer {
+    height: 18px;
 }
 
 .side-project-card {
@@ -225,7 +307,18 @@
     }
 
     #positioning .value {
-        padding: 0;
+        padding: 0 0 0 20px;
+    }
+
+    #positioning h1,
+    #proof-points h1,
+    #background h1 {
+        margin-left: 20px;
+    }
+
+    #proof-points .work-sample-card,
+    #background p {
+        padding-left: 20px;
     }
 
     .work-sample-card img,
