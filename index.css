@@ -1,73 +1,235 @@
-/* skills section */
-
-.skills-chips {
-    white-space: nowrap;
-    list-style-type: none;
+#proof-points .work-sample-card,
+#work-samples .work-sample-card {
+    padding: 28px;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, var(--surface-strong), rgba(255, 255, 255, 0.78));
+    box-shadow: 0 16px 30px rgba(20, 43, 70, 0.08);
 }
 
-/* section samples */
+#positioning .value {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#positioning .value > div:first-child {
+    max-width: none;
+}
+
+#positioning .value p {
+    max-width: none;
+    font-size: 1.02rem;
+}
+
+#working-style > .section-content > p:first-of-type,
+#background p,
+#proof-points p,
+#work-samples p,
+#side-projects p {
+    color: var(--text);
+}
+
+.skills-row {
+    margin-top: 4px;
+}
+
+.skills-block {
+    position: relative;
+    padding: 28px;
+    border: 1px solid var(--line-medium);
+    border-radius: var(--radius);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(240, 247, 252, 0.76)),
+        linear-gradient(135deg, rgba(135, 173, 210, 0.10), rgba(255, 255, 255, 0));
+    box-shadow: 0 16px 30px rgba(20, 43, 70, 0.08);
+}
+
+.skills-block::after {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(79, 121, 168, 0.08);
+    border-radius: calc(var(--radius) - 8px);
+    pointer-events: none;
+}
+
+.skills-chips {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.skills-chips li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text);
+    white-space: normal;
+}
+
+.skills-chips li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #e0b574);
+    box-shadow: 0 0 0 5px rgba(215, 154, 71, 0.11);
+    transform: translateY(-50%);
+}
+
+.work-sample-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-sample-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 6px;
+    background: linear-gradient(180deg, rgba(79, 121, 168, 0.85), rgba(215, 154, 71, 0.85));
+}
+
+.work-sample-card img {
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+}
 
 .company-benefits::before {
-    content: "Company benefits - ";
+    content: "Outcome";
+    display: block;
+    margin-bottom: 6px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.78rem;
     font-weight: 700;
-    color: var(--dark-headline-color);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--headline);
 }
 
 .personal-benefits::before {
-    content: "What I have learned - ";
+    content: "Contribution";
+    display: block;
+    margin-bottom: 6px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.78rem;
     font-weight: 700;
-    color: var(--dark-headline-color);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--headline);
 }
 
-/* side projects */
+#background .section-content {
+    position: relative;
+}
+
+#background .section-content::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 160px;
+    height: 160px;
+    border-radius: 28px;
+    background:
+        linear-gradient(135deg, rgba(135, 173, 210, 0.22), rgba(215, 154, 71, 0.08)),
+        linear-gradient(transparent 0, transparent 48%, rgba(28, 59, 95, 0.12) 48%, rgba(28, 59, 95, 0.12) 50%, transparent 50%);
+    transform: rotate(45deg);
+    opacity: 0.85;
+    pointer-events: none;
+}
 
 .side-project-card {
-    background-color: var(--background-color2);
-    border-radius: 8px;
-    padding: var(--medium-space);
-    max-width: var(--first-breakpoint);
-    margin: auto;
-    filter: drop-shadow(2px 2px 5px var(--shadow-color));
-    /* ensure zoomed image is clipped to the card shape */
+    position: relative;
+    padding: 28px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line-soft);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 248, 253, 0.94)),
+        linear-gradient(135deg, rgba(79, 121, 168, 0.08), rgba(255, 255, 255, 0));
+    box-shadow: 0 18px 34px rgba(20, 43, 70, 0.12);
     overflow: hidden;
+}
+
+.side-project-card::before {
+    content: "";
+    position: absolute;
+    inset: auto -12% -22% auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(135, 173, 210, 0.13), rgba(215, 154, 71, 0.08));
+    transform: rotate(45deg);
+    pointer-events: none;
 }
 
 .side-project-link {
     display: block;
-    color: var(--dark-text-color);
+    color: var(--text);
     text-decoration: none;
     outline: none;
 }
 
 .side-project-image {
-    border-radius: 8px;
-    border: 1px solid var(--image-border-color);
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-small);
+    border: 1px solid rgba(215, 227, 239, 0.95);
     display: block;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
     object-fit: cover;
-    /* smooth GPU-accelerated animation when scaled */
-    transition: transform 280ms cubic-bezier(.2,.8,.2,1), filter 280ms ease;
+    box-shadow: 0 16px 30px rgba(20, 43, 70, 0.12);
+    transition: transform 280ms cubic-bezier(.2, .8, .2, 1), box-shadow 280ms ease;
     will-change: transform;
 }
 
-/* Hover / focus zoom: scale the image slightly while keeping the card clipped */
 .side-project-link:hover .side-project-image,
 .side-project-link:focus .side-project-image,
 .side-project-link:focus-visible .side-project-image {
-    transform: scale(1.08);
+    transform: scale(1.04);
+    box-shadow: 0 20px 36px rgba(20, 43, 70, 0.18);
 }
 
-/* Slight visual lift on hover to enhance affordance */
 .side-project-link:hover .side-project-card,
 .side-project-link:focus .side-project-card,
 .side-project-link:focus-visible .side-project-card {
-    filter: drop-shadow(4px 6px 12px rgba(0,0,0,0.12));
+    border-color: rgba(79, 121, 168, 0.24);
+    box-shadow: 0 24px 42px rgba(20, 43, 70, 0.16);
 }
 
-/* Responsive tweaks: a bit more compact padding on small screens */
+@media (max-width: 899px) {
+    #background .section-content::after {
+        width: 112px;
+        height: 112px;
+        top: 28px;
+        right: 12px;
+    }
+}
+
 @media (max-width: 640px) {
+    #positioning .value,
+    #proof-points .work-sample-card,
+    #work-samples .work-sample-card,
+    .skills-block,
     .side-project-card {
-        padding: var(--small-space);
-        max-width: 100%;
+        padding: 22px;
+    }
+
+    #positioning .value {
+        padding: 0;
+    }
+
+    .work-sample-card img,
+    .side-project-image {
+        min-height: 0;
     }
 }
