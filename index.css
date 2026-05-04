@@ -1,19 +1,26 @@
 #positioning,
 #proof-points,
-#background {
+#background,
+#work-samples {
     position: relative;
 }
 
 #positioning .section-content,
 #proof-points .section-content,
-#background .section-content {
+#background .section-content,
+#work-samples .section-content {
     padding-top: clamp(46px, 6vw, 74px);
     padding-bottom: clamp(46px, 6vw, 74px);
 }
 
+#work-samples .section-content {
+    width: min(calc(100% - 40px), 1120px);
+}
+
 #positioning .section-content::before,
 #proof-points .section-content::before,
-#background .section-content::before {
+#background .section-content::before,
+#work-samples .section-content::before {
     content: "";
     position: absolute;
     left: 0;
@@ -26,12 +33,12 @@
 
 #positioning h1,
 #proof-points h1,
-#background h1 {
+#background h1,
+#work-samples h1 {
     margin-left: 28px;
 }
 
-#proof-points .work-sample-card,
-#work-samples .work-sample-card {
+#proof-points .work-sample-card {
     padding: 28px;
     border: 1px solid var(--line-soft);
     border-radius: var(--radius);
@@ -150,13 +157,13 @@
     border-bottom: 1px solid rgba(79, 121, 168, 0.12);
 }
 
-.work-sample-card::before {
+/* .work-sample-card::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 6px;
     background: linear-gradient(180deg, rgba(79, 121, 168, 0.85), rgba(215, 154, 71, 0.85));
-}
+} */
 
 .work-sample-card img {
     height: 100%;
@@ -164,15 +171,68 @@
     object-fit: cover;
 }
 
-#proof-points .work-sample-card::before {
+/* #proof-points .work-sample-card::before {
     width: 1px;
     background: linear-gradient(180deg, rgba(79, 121, 168, 0.48), rgba(215, 154, 71, 0.38));
-}
+} */
 
 #proof-points .work-sample-card img {
     max-width: 240px;
     min-height: 0;
     aspect-ratio: 4 / 3;
+}
+
+#proof-points .work-sample-card > .small-spacer,
+#work-samples .work-sample-card > .small-spacer {
+    display: none;
+}
+
+#work-samples .work-sample-card {
+    display: grid;
+    gap: 18px;
+    padding: 30px 0 30px 28px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+#work-samples .work-sample-card + .large-spacer {
+    display: none;
+}
+
+#work-samples .work-sample-card:not(:last-of-type) {
+    margin-bottom: 38px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(79, 121, 168, 0.12);
+}
+
+#work-samples .work-sample-card::before {
+    width: 1px;
+    background: linear-gradient(180deg, rgba(79, 121, 168, 0.44), rgba(79, 121, 168, 0.08));
+}
+
+#work-samples .work-sample-card img {
+    width: min(100%, 340px);
+    max-width: 340px;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+}
+
+#work-samples .work-sample-card p {
+    max-width: none;
+}
+
+@media (min-width: 900px) {
+    #work-samples .work-sample-card {
+        grid-template-columns: minmax(320px, 380px) minmax(0, 1fr);
+        gap: 40px;
+        align-items: start;
+    }
+
+    #work-samples .work-sample-card > div:last-child {
+        padding-top: 4px;
+    }
 }
 
 .company-benefits::before {
@@ -300,7 +360,6 @@
 @media (max-width: 640px) {
     #positioning .value,
     #proof-points .work-sample-card,
-    #work-samples .work-sample-card,
     .skills-block,
     .side-project-card {
         padding: 22px;
@@ -312,13 +371,20 @@
 
     #positioning h1,
     #proof-points h1,
-    #background h1 {
+    #background h1,
+    #work-samples h1 {
         margin-left: 20px;
     }
 
     #proof-points .work-sample-card,
+    #work-samples .work-sample-card,
     #background p {
         padding-left: 20px;
+    }
+
+    #work-samples .work-sample-card img {
+        width: 100%;
+        max-width: none;
     }
 
     .work-sample-card img,
