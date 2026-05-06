@@ -28,6 +28,7 @@
     --content-width-article: 820px;
     --radius: 22px;
     --radius-small: 14px;
+    --radius-pill: 27px;
     --space-1: 18px;
     --space-2: 28px;
     --space-3: 40px;
@@ -140,7 +141,7 @@ header .cta {
     min-height: 54px;
     padding: 0 22px;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
     color: #112844;
     text-align: center;
