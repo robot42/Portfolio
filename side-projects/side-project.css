@@ -1,71 +1,39 @@
-.light-background .section-content:not(.side-project-image),
-.dark-background .section-content:not(.side-project-image) {
-    width: min(calc(100% - 40px), 820px);
+section > .section-content:not(.side-project-image) {
+    width: min(calc(100% - 40px), var(--content-width-article));
     padding-top: clamp(42px, 6vw, 70px);
     padding-bottom: clamp(42px, 6vw, 70px);
-    position: relative;
 }
 
-.light-background .section-content:not(.side-project-image)::before,
-.dark-background .section-content:not(.side-project-image)::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(79, 121, 168, 0.18), rgba(79, 121, 168, 0.03));
-    pointer-events: none;
+section > .section-content:not(.side-project-image) > * {
+    margin-left: var(--rail-offset);
 }
 
-.light-background .section-content:not(.side-project-image) > h2,
-.light-background .section-content:not(.side-project-image) > p,
-.light-background .section-content:not(.side-project-image) > ul,
-.light-background .section-content:not(.side-project-image) > ol,
-.dark-background .section-content:not(.side-project-image) > h2,
-.dark-background .section-content:not(.side-project-image) > p,
-.dark-background .section-content:not(.side-project-image) > ul,
-.dark-background .section-content:not(.side-project-image) > ol {
-    margin-left: 28px;
-}
-
-.light-background .section-content:not(.side-project-image) > p,
-.dark-background .section-content:not(.side-project-image) > p {
-    max-width: 62ch;
-}
-
-.light-background .section-content:not(.side-project-image) > p + .small-spacer,
-.dark-background .section-content:not(.side-project-image) > p + .small-spacer {
-    height: 18px;
-}
-
-.light-background .section-content:not(.side-project-image) > h2,
-.dark-background .section-content:not(.side-project-image) > h2 {
+section > .section-content:not(.side-project-image) > h2 {
     max-width: 20ch;
 }
 
-.side-project-image {
-    width: min(calc(100% - 40px), 820px);
-    padding-top: clamp(34px, 4vw, 52px);
-    padding-bottom: clamp(34px, 4vw, 52px);
-    position: relative;
+section > .section-content:not(.side-project-image) > p {
+    max-width: 62ch;
 }
 
-.side-project-image::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(79, 121, 168, 0.18), rgba(79, 121, 168, 0.03));
-    pointer-events: none;
+section > .section-content:not(.side-project-image) > * + * {
+    margin-top: var(--space-1);
+}
+
+section > .section-content:not(.side-project-image) > :not(h2) + h2 {
+    margin-top: var(--space-3);
+}
+
+.side-project-image {
+    width: min(calc(100% - 40px), var(--content-width-article));
+    padding-top: clamp(34px, 4vw, 52px);
+    padding-bottom: clamp(34px, 4vw, 52px);
 }
 
 .side-project-image > img {
+    width: calc(100% - var(--rail-offset));
     height: 100%;
-    width: calc(100% - 28px);
-    margin-left: 28px;
+    margin-left: var(--rail-offset);
     object-fit: contain;
 }
 
@@ -96,25 +64,8 @@ li:last-child {
 }
 
 @media (max-width: 640px) {
-    .light-background .section-content:not(.side-project-image),
-    .dark-background .section-content:not(.side-project-image),
+    section > .section-content:not(.side-project-image),
     .side-project-image {
-        width: min(calc(100% - 28px), 1120px);
-    }
-
-    .light-background .section-content:not(.side-project-image) > h2,
-    .light-background .section-content:not(.side-project-image) > p,
-    .light-background .section-content:not(.side-project-image) > ul,
-    .light-background .section-content:not(.side-project-image) > ol,
-    .dark-background .section-content:not(.side-project-image) > h2,
-    .dark-background .section-content:not(.side-project-image) > p,
-    .dark-background .section-content:not(.side-project-image) > ul,
-    .dark-background .section-content:not(.side-project-image) > ol {
-        margin-left: 20px;
-    }
-
-    .side-project-image > img {
-        width: calc(100% - 20px);
-        margin-left: 20px;
+        width: min(calc(100% - 28px), var(--section-width));
     }
 }
