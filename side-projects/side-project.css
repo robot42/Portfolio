@@ -1,51 +1,85 @@
-.side-project {
-    padding: var(--small-space);
-    max-width: var(--first-breakpoint);
-    margin: auto;
+.side-project-article {
+    position: relative;
+    width: min(calc(100% - 28px), var(--section-width));
+    margin: var(--space-section-first, 36px) auto 28px;
 }
 
-.side-project > p {
-    padding-bottom: var(--small-space);
+.side-project-article > .section-content {
+    width: min(calc(100% - 40px), var(--content-width-article));
+    padding: clamp(42px, 6vw, 70px) 0;
 }
 
-.side-project > p:last-child {
-    padding-bottom: 0;
+.side-project-article > .section-content > * {
+    margin-left: var(--rail-offset);
 }
 
-.side-project-image {
-    text-align: center;
+.side-project-article > .section-content > * + * {
+    margin-top: var(--space-1);
 }
 
-.side-project-image > img {
-    height: 100%;
+.side-project-article > .section-content > p {
+    max-width: 62ch;
+}
+
+.side-project-article > .section-content > h2 {
+    max-width: 28ch;
+    margin-top: var(--space-3);
+    margin-bottom: 0;
+}
+
+.side-project-article > .section-content > :not(h2) + h2 {
+    margin-top: var(--space-3);
+}
+
+.side-project-article > .section-content > ul,
+.side-project-article > .section-content > ol {
+    max-width: 60ch;
+    padding-left: 26px;
+}
+
+.side-project-article .decorated::after {
+    margin-top: 10px;
+}
+
+.article-figure {
+    width: calc(100% - var(--rail-offset));
+    max-width: 585px;
+    margin-top: var(--space-3);
+}
+
+.article-figure + * {
+    margin-top: var(--space-3);
+}
+
+.article-figure > img {
     width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
-#side_project_icons_img {
-    max-width: 585px;
+.article-action {
+    margin-top: calc(var(--space-5) + var(--space-3));
+    text-align: left;
 }
 
-#side_project_icons_new_img {
-    max-width: 736px;
-}
-
-#test_coverage_img {
-    max-width: 704px;
-}
-
-ol {
-    margin-left: 32px;
-}
-
-ul {
-    margin-left: 32px;
+.article-action .cta {
+    min-width: 236px;
 }
 
 li {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 li:last-child {
     padding-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .side-project-article {
+        width: min(calc(100% - 18px), var(--section-width));
+    }
+
+    .side-project-article > .section-content {
+        width: min(calc(100% - 28px), var(--content-width));
+    }
 }
