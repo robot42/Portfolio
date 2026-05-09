@@ -1,5 +1,16 @@
 {
+  "scripts": {
+    "deploy": "tsx scripts/deploy.ts",
+    "deploy:dry-run": "tsx scripts/deploy.ts --dry-run",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
+    "basic-ftp": "^6.0.1",
     "playwright": "^1.59.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   }
 }

@@ -43,6 +43,7 @@
 
 .article-figure {
     width: calc(100% - var(--rail-offset));
+    max-width: 585px;
     margin-top: var(--space-3);
 }
 
@@ -54,18 +55,6 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-#side_project_icons_img {
-    max-width: 585px;
-}
-
-#side_project_icons_new_img {
-    max-width: 736px;
-}
-
-#test_coverage_img {
-    max-width: 704px;
 }
 
 .article-action {
