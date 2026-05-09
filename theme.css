@@ -494,6 +494,17 @@ footer .cta {
     }
 }
 
+@media (min-width: 641px) and (max-width: 899px) {
+    .section-title {
+        margin-bottom: 56px;
+    }
+
+    #side-projects .side-project-image {
+        width: min(100%, 340px);
+        max-width: 340px;
+    }
+}
+
 @media (max-width: 640px) {
     :root {
         --space-1: 16px;
