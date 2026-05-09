@@ -3,7 +3,8 @@ import path from "node:path";
 import { mkdir, readdir, stat } from "node:fs/promises";
 
 const PROJECT_ROOT = process.cwd();
-const SITE_HOST = "ehuettig42.de";
+const SITE_NAME = "ehuettig42.de";
+const FTP_HOST = process.env.FTP_HOST ?? "www13.your-server.de";
 const FTP_USER = "torstek_0";
 const FTP_PASSWORD = process.env.FTP_PASSWORD ?? "REPLACE_WITH_PASSWORD";
 
@@ -12,6 +13,8 @@ const FTP_PASSWORD = process.env.FTP_PASSWORD ?? "REPLACE_WITH_PASSWORD";
 const FTP_PORT = Number(process.env.FTP_PORT ?? 21);
 const FTP_SECURE: AccessOptions["secure"] =
   process.env.FTP_SECURE === "implicit" ? "implicit" : true;
+const FTP_TLS_SERVERNAME = process.env.FTP_TLS_SERVERNAME ?? FTP_HOST;
+const FTP_REJECT_UNAUTHORIZED = process.env.FTP_REJECT_UNAUTHORIZED !== "0";
 
 const REMOTE_ROOT = "/";
 const SIDE_PROJECTS_DIR = "side-projects";
@@ -64,14 +67,26 @@ async function main(): Promise<void> {
   client.ftp.verbose = process.env.FTP_VERBOSE === "1";
 
   try {
-    console.log(`Connecting to ${SITE_HOST}:${FTP_PORT} with FTPS...`);
-    await client.access({
-      host: SITE_HOST,
-      port: FTP_PORT,
-      user: FTP_USER,
-      password: FTP_PASSWORD,
-      secure: FTP_SECURE,
-    });
+    if (!FTP_REJECT_UNAUTHORIZED) {
+      console.warn("TLS certificate verification is disabled for this run.");
+    }
+
+    console.log(`Connecting to ${FTP_HOST}:${FTP_PORT} with FTPS...`);
+    try {
+      await client.access({
+        host: FTP_HOST,
+        port: FTP_PORT,
+        user: FTP_USER,
+        password: FTP_PASSWORD,
+        secure: FTP_SECURE,
+        secureOptions: {
+          servername: FTP_TLS_SERVERNAME,
+          rejectUnauthorized: FTP_REJECT_UNAUTHORIZED,
+        },
+      });
+    } catch (error) {
+      throw new Error(buildConnectionErrorMessage(error));
+    }
 
     const remoteState = await collectRemoteState(client);
     const backupDir = await backupRemoteState(client, remoteState);
@@ -95,8 +110,12 @@ function parseArgs(args: string[]): Options {
 
 Environment:
   FTP_PASSWORD=...       Use a password without editing this script.
+  FTP_HOST=...           Override the FTP hostname when the provider has a separate host.
   FTP_PORT=990           Switch to implicit FTPS port when needed.
   FTP_SECURE=implicit    Use implicit FTPS instead of explicit FTPS.
+  FTP_TLS_SERVERNAME=... Override the TLS certificate hostname/SNI.
+  FTP_REJECT_UNAUTHORIZED=0
+                         Last-resort testing mode for mismatched certificates.
   FTP_VERBOSE=1          Print FTP protocol details for debugging.`);
     process.exit(0);
   }
@@ -118,6 +137,10 @@ async function collectLocalState(): Promise<LocalState> {
 
   const rootEntries = await readdir(PROJECT_ROOT, { withFileTypes: true });
   for (const entry of rootEntries) {
+    if (isDotEntryName(entry.name)) {
+      continue;
+    }
+
     if (!entry.isFile() || !isManagedRootFile(entry.name)) {
       continue;
     }
@@ -149,6 +172,10 @@ async function collectLocalDirectory(
 ): Promise<void> {
   const entries = await readdir(localDirectory, { withFileTypes: true });
   for (const entry of entries) {
+    if (isDotEntryName(entry.name)) {
+      continue;
+    }
+
     const relativePath = path.posix.join(relativeDirectory, entry.name);
     const localPath = path.join(localDirectory, entry.name);
 
@@ -247,7 +274,7 @@ async function collectRemoteDirectory(
 }
 
 async function backupRemoteState(client: Client, remoteState: RemoteState): Promise<string> {
-  const backupDir = path.join(BACKUP_ROOT, `${SITE_HOST}-${formatTimestamp(new Date())}`);
+  const backupDir = path.join(BACKUP_ROOT, `${SITE_NAME}-${formatTimestamp(new Date())}`);
   await mkdir(backupDir, { recursive: true });
 
   for (const relativeDirectory of sortDirectoriesForCreate(remoteState.directories)) {
@@ -332,6 +359,10 @@ function isManagedRootFile(fileName: string): boolean {
   return ROOT_FILE_EXTENSIONS.has(path.posix.extname(fileName).toLowerCase());
 }
 
+function isDotEntryName(name: string): boolean {
+  return name.startsWith(".");
+}
+
 function isRemoteFileLike(entry: FileInfo): boolean {
   return entry.isFile || entry.isSymbolicLink;
 }
@@ -356,6 +387,21 @@ function formatTimestamp(date: Date): string {
   const minute = String(date.getMinutes()).padStart(2, "0");
   const second = String(date.getSeconds()).padStart(2, "0");
   return `${year}${month}${day}-${hour}${minute}${second}`;
+}
+
+function buildConnectionErrorMessage(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+
+  if (message.includes("Hostname/IP does not match certificate")) {
+    return `${message}
+
+The FTPS server certificate does not match the configured FTP host (${FTP_HOST}).
+Use FTP_HOST if your provider has a separate FTP hostname, or use FTP_TLS_SERVERNAME
+only if you intentionally trust the certificate name returned by the provider.
+Avoid FTP_REJECT_UNAUTHORIZED=0 except as a temporary last-resort test.`;
+  }
+
+  return message;
 }
 
 main().catch((error: unknown) => {
