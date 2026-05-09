@@ -167,6 +167,14 @@ footer {
     margin: 18px auto 0;
 }
 
+main > section:first-child {
+    margin-top: var(--space-3);
+}
+
+main > section:first-child::before {
+    content: none;
+}
+
 section::before,
 footer::before {
     content: "";
